@@ -1,0 +1,481 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "9e51bbc8-7d2d-43ec-9d92-fca5602d25d8": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "medium",
+        "image": "shopify:\/\/shop_images\/our_teas_are_vibrant._unique.._option_2.jpg",
+        "subheading": "tea.o.graphy stands for handcrafted teas",
+        "title": "Our teas are vibrant. Unique. ",
+        "content": "<p>Carefully curated & handcrafted, often invoking personal stories and landscapes. <em>There is ritual and connection found in tea. <br\/><\/em><br\/><strong>We are here to bring this fundamental link to you and your customers.<\/strong><\/p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "bottom_left",
+        "text_color": "{{ shop.brand.colors.primary[0].background }}",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "overlay_opacity": 72
+      }
+    },
+    "ef77e866-bc12-4c46-80e9-0c2859b1ef83": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15745038909595__ef77e866-bc12-4c46-80e9-0c2859b1ef83-16705394749889d232-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wholesale_-_possible_image_Medium_dccd8445-7305-49df-bb8d-15e44dce2981.jpg",
+            "tab_label": "WHOLESALE",
+            "subheading": "order our teas for your store",
+            "title": "WHOLESALE",
+            "content": "<p>Our wholesale partnerships range from retail outlets and boutiques, restaurants and cafes,  hotels and spas, to groceries and markets.<\/p><p>We offer our full range of handcrafted teas in a variety of packaging formats - from retail ready packaging, to bulk looseleaf teas, to single use, compostable teabags.<\/p><p> We also love collaborating on private labels and other partnerships. Let us know how we can best serve you!<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15745038909595__ef77e866-bc12-4c46-80e9-0c2859b1ef83-16705394749889d232-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "boxed",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "0c52d8f9-04f6-4652-aabe-0ab21549c268": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15745038909595__0c52d8f9-04f6-4652-aabe-0ab21549c268-16705394749889d232-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/private_label_Medium_34f1e932-8837-4bbc-80a5-a7406bbc7afc.jpg",
+            "tab_label": "Item",
+            "subheading": "your brand, your story, your tea",
+            "title": "Private Labeling",
+            "content": "<p>With our Private Labeling Program, we can create a custom blend or utilize an existing blend to package with your label and branding. <\/p><p>Your brand is your identity, your ethos, your story. <\/p><p>By private labeling teas, you are able to minimize your investment in R&D and start-up costs, while creating something truly tailored to your story and brand. One of our most recent and recognizable private labels is with <a href=\"\/pages\/moon-unit\" target=\"_blank\" title=\"Moon Unit\">Moon Unit ™ Tea<\/a>.<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15745038909595__0c52d8f9-04f6-4652-aabe-0ab21549c268-16705394749889d232-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "boxed",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "a9b7706e-4951-4146-8c9a-0799672f8b4f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15745038909595__a9b7706e-4951-4146-8c9a-0799672f8b4f-16705394749889d232-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dual_branding_option_2_Medium_5fcfd375-ea18-4a70-8874-4c4b82a50d42.jpg",
+            "tab_label": "dual branding",
+            "subheading": "Your logo on our teas",
+            "title": "Dual Branding",
+            "content": "<p>Dual-Branding accomplishes many of the same objectives as a private label, while also aligning your brand with a like-minded, ethical, high visibility tea company and reduces the costs of customization. <\/p><p>We currently dual-brand with companies such as:  <a href=\"https:\/\/www.skitaos.com\/lodging\/blake\" target=\"_blank\">The Blake at the Taos Ski Valley<\/a>, <a href=\"https:\/\/ojospa.com\/\" target=\"_blank\">Ojo Spa<\/a> , <a href=\"https:\/\/lospoblanos.com\/\" target=\"_blank\">Los Poblanos<\/a>, <a href=\"https:\/\/bisonstarnaturals.com\/\" target=\"_blank\">Bison Star Naturals<\/a> and many more.<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15745038909595__a9b7706e-4951-4146-8c9a-0799672f8b4f-16705394749889d232-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "boxed",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "4ff17d80-192c-4c9d-9ab0-8bb7931ef68e": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "looking for something different?",
+        "title": "more of our options",
+        "content": "<p><a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">Get in touch<\/a> with us to become a partner & learn about our unique customizations.<\/p>",
+        "button_text": "contact us",
+        "button_link": "shopify:\/\/pages\/contact",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "{{ shop.brand.colors.secondary[1].background }}",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "eaa5bd75-df44-4ea3-a71e-3e3b6da4a7ec": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15745038909595__eaa5bd75-df44-4ea3-a71e-3e3b6da4a7ec-167054109041cd05b0-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-12-08_at_1.43.10_PM.png",
+            "tab_label": "Custom Blends",
+            "subheading": "",
+            "title": "Custom Blends",
+            "content": "<p>We love the creative process of blending teas. It is a craft and art - an act of creating something beautiful and nourishing. <\/p><p>We are deeply honored to know that these teas find their way into people’s homes and rituals. <\/p><p>For us, it is much more than simply creating a recipe -  but to create a tea that is truly unique and speaks to your customers and community.<em><strong> <\/strong><\/em><\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "89e280e6-7e1b-4038-b683-0db4a737d3dd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/corporate_gifts___wedding_favors_Large_3b155f24-b2b9-4b00-a240-ef932ff26ecf.jpg",
+            "tab_label": "CORPORATE GIFTS & WEDDING FAVORS",
+            "subheading": "",
+            "title": "CORPORATE & WEDDING FAVORS",
+            "content": "<p>From customized tea bags to lovely curated teawares and teas - let us collaborate with you on holiday gifting, wedding favors, and other personalized gifts!  <\/p><p>We love curating beautiful and personal gifts.  We will collaborate with you to best represent your event, messages of gratitude, season greetings, and more.<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15745038909595__eaa5bd75-df44-4ea3-a71e-3e3b6da4a7ec-167054109041cd05b0-0",
+        "89e280e6-7e1b-4038-b683-0db4a737d3dd"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "both",
+        "image_position": "left",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "{{ shop.brand.colors.secondary[1].background }}",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "9a72e1ae-151d-4b41-9860-dfaa8fb554c8": {
+      "type": "multi-column",
+      "blocks": {
+        "template--15745038909595__9a72e1ae-151d-4b41-9860-dfaa8fb554c8-167054374705f4e4e5-0": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "retail ready",
+            "content": "<p>We offer retail ready packaging for our 1oz, 2oz, and 4oz packaging. This style packaging is almost fully compostable - even in your backyard compost.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15745038909595__9a72e1ae-151d-4b41-9860-dfaa8fb554c8-167054374705f4e4e5-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "bulk loose leaf",
+            "content": "<p>Bulk loose leaf tea offers the most economical & versatile way to serve and distribute tea.<\/p><p>With loose leaf tea you have versatility to use for hot tea service, add flavor to a culinary dish or cocktail, or to make iced tea in volume.<\/p><p>We offer bulk loose leaf tea in half lb, 1 lb, and 3 lb+ quantities.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15745038909595__9a72e1ae-151d-4b41-9860-dfaa8fb554c8-167054374705f4e4e5-2": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "single-serving tea bags",
+            "content": "<p>Our tea bags are made of unbleached hemp, making them fully compostable - NO microplastics!<\/p><p>So you can feel good about serving these up daily. We offer our tea bags in bulk or individually packaged.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--15745038909595__9a72e1ae-151d-4b41-9860-dfaa8fb554c8-167054374705f4e4e5-0",
+        "template--15745038909595__9a72e1ae-151d-4b41-9860-dfaa8fb554c8-167054374705f4e4e5-1",
+        "template--15745038909595__9a72e1ae-151d-4b41-9860-dfaa8fb554c8-167054374705f4e4e5-2"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "hand-packaged with much care & intention",
+        "title": "packaging styles",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "large",
+        "desktop_item_size": "large",
+        "spacing": "normal",
+        "background": "{{ shop.brand.colors.secondary[1].background }}",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5e0ebd21-d9e1-4c26-a225-bbf0038a87f8": {
+      "type": "logo-list",
+      "blocks": {
+        "caa5ce24-87fa-42c1-ad13-7105506cb79b": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/proudly-serving-logo_los_ojos.jpg",
+            "link": "https:\/\/ojosparesorts.com\/"
+          }
+        },
+        "5a8f1d87-af0a-4da5-b5ba-36a9e1fdb47c": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/proudly-serving-logo_bishops_lodge.jpg",
+            "link": "https:\/\/aubergeresorts.com\/bishopslodge\/"
+          }
+        },
+        "48ab2cf1-57e8-401c-a0d2-3f44a918d3f1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/los_poblanos_logo.jpg",
+            "link": "https:\/\/lospoblanos.com\/"
+          }
+        },
+        "513224e3-8442-4b8f-a362-d9e328ba4739": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/moon-unit_color_e8ac069d-93b3-4dd0-8d89-3dec3a1c9d9f.jpg",
+            "link": "shopify:\/\/pages\/moon-unit"
+          }
+        },
+        "fb106b60-b855-4e76-9143-181f61263117": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/mw-proudly-serving-logo.png",
+            "link": "https:\/\/meowwolf.com\/"
+          }
+        },
+        "f7ded431-44d8-4c80-b9bf-17b369f08648": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-1.jpg",
+            "link": "https:\/\/www.stakeouttaos.com\/"
+          }
+        },
+        "template--15745038909595__5e0ebd21-d9e1-4c26-a225-bbf0038a87f8-167054374730760b66-5": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-11.jpg",
+            "link": "https:\/\/wildleavenbakery.com\/"
+          }
+        },
+        "d9fad278-162d-4650-ba80-9c474d49f2d5": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-2.jpg",
+            "link": "https:\/\/www.skitaos.com\/lodging\/blake"
+          }
+        },
+        "7ae6e33a-0238-4e55-951d-380df30cf1f0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-17.jpg",
+            "link": "https:\/\/www.cidsfoodmarket.com\/"
+          }
+        },
+        "af0f3cc9-4b26-4604-9650-abf68b74c358": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-5.jpg",
+            "link": "https:\/\/bisonstarnaturals.com\/"
+          }
+        },
+        "590d2ddd-336a-4c26-9bbe-d4dfa8004379": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-15_7592b1c5-cee9-44e1-adf4-94468bab14c9.jpg",
+            "link": "https:\/\/www.facebook.com\/profile.php?id=100069378381985"
+          }
+        },
+        "01201ff2-c335-4c2a-8ecd-e9240a3b3121": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-10.jpg",
+            "link": "https:\/\/palomasantafe.com\/"
+          }
+        },
+        "79248543-0c64-4cfe-8c2d-14f0f2701c47": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-16.jpg",
+            "link": "https:\/\/manzanitamarket.net\/"
+          }
+        },
+        "ce7c2c8a-b23d-4cf5-9fd5-2bdaa40ab77f": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-8.jpg",
+            "link": "https:\/\/www.skitaos.com\/"
+          }
+        },
+        "template--15745038909595__5e0ebd21-d9e1-4c26-a225-bbf0038a87f8-167054374730760b66-2": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-12.jpg",
+            "link": "https:\/\/chokolabeantobar.com\/"
+          }
+        },
+        "9f41f4f5-773d-4c51-af46-2b44591b9053": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-7.jpg",
+            "link": "https:\/\/www.convergelectureseries.org\/"
+          }
+        },
+        "efa90611-aa43-48a8-bcec-44dcc35f014b": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-4.jpg",
+            "link": "https:\/\/www.littlebearcoffee.com\/"
+          }
+        },
+        "f670cdc0-f5e0-435a-80da-120c575b58e1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-3.jpg",
+            "link": "https:\/\/www.platacoffee.com\/"
+          }
+        },
+        "f25539e3-0c7d-4f1b-9847-b684b47fae76": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/download_19.webp",
+            "link": "https:\/\/madeinnewmexico.com\/"
+          }
+        },
+        "3d440b0c-7070-4179-9708-77abd9b73c00": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-9.jpg",
+            "link": "http:\/\/www.gutiztaos.com\/"
+          }
+        },
+        "0609b8ef-3c2d-4073-bf5c-c59834bd870f": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/download_8.webp",
+            "link": "https:\/\/www.taosherb.com\/store\/"
+          }
+        },
+        "ca150d4e-48ad-4097-a35d-ce97cc955b8f": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/download_7.webp",
+            "link": "https:\/\/www.donabetaos.com\/"
+          }
+        },
+        "133c6977-8ecb-44e4-95ec-2bf94750501f": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo-18_d44648e7-1fe1-4263-b218-95aa62fa42bd.jpg",
+            "link": "http:\/\/www.remedycoffeeabq.com\/"
+          }
+        },
+        "c3add46f-ab69-4f27-bb0a-0cc2005f64f6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/partner-logo.jpg",
+            "link": "https:\/\/www.theweatheredbarngreenport.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "caa5ce24-87fa-42c1-ad13-7105506cb79b",
+        "5a8f1d87-af0a-4da5-b5ba-36a9e1fdb47c",
+        "48ab2cf1-57e8-401c-a0d2-3f44a918d3f1",
+        "513224e3-8442-4b8f-a362-d9e328ba4739",
+        "fb106b60-b855-4e76-9143-181f61263117",
+        "f7ded431-44d8-4c80-b9bf-17b369f08648",
+        "template--15745038909595__5e0ebd21-d9e1-4c26-a225-bbf0038a87f8-167054374730760b66-5",
+        "d9fad278-162d-4650-ba80-9c474d49f2d5",
+        "7ae6e33a-0238-4e55-951d-380df30cf1f0",
+        "af0f3cc9-4b26-4604-9650-abf68b74c358",
+        "590d2ddd-336a-4c26-9bbe-d4dfa8004379",
+        "01201ff2-c335-4c2a-8ecd-e9240a3b3121",
+        "79248543-0c64-4cfe-8c2d-14f0f2701c47",
+        "ce7c2c8a-b23d-4cf5-9fd5-2bdaa40ab77f",
+        "template--15745038909595__5e0ebd21-d9e1-4c26-a225-bbf0038a87f8-167054374730760b66-2",
+        "9f41f4f5-773d-4c51-af46-2b44591b9053",
+        "efa90611-aa43-48a8-bcec-44dcc35f014b",
+        "f670cdc0-f5e0-435a-80da-120c575b58e1",
+        "f25539e3-0c7d-4f1b-9847-b684b47fae76",
+        "3d440b0c-7070-4179-9708-77abd9b73c00",
+        "0609b8ef-3c2d-4073-bf5c-c59834bd870f",
+        "ca150d4e-48ad-4097-a35d-ce97cc955b8f",
+        "133c6977-8ecb-44e4-95ec-2bf94750501f",
+        "c3add46f-ab69-4f27-bb0a-0cc2005f64f6"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "a selection of our current partnerships",
+        "title": "PROUDLY SERVING",
+        "button_text": "contact us to become a partner",
+        "button_link": "shopify:\/\/pages\/contact",
+        "stack_logos": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)",
+        "logo_background": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9e51bbc8-7d2d-43ec-9d92-fca5602d25d8",
+    "ef77e866-bc12-4c46-80e9-0c2859b1ef83",
+    "0c52d8f9-04f6-4652-aabe-0ab21549c268",
+    "a9b7706e-4951-4146-8c9a-0799672f8b4f",
+    "4ff17d80-192c-4c9d-9ab0-8bb7931ef68e",
+    "eaa5bd75-df44-4ea3-a71e-3e3b6da4a7ec",
+    "9a72e1ae-151d-4b41-9860-dfaa8fb554c8",
+    "5e0ebd21-d9e1-4c26-a225-bbf0038a87f8"
+  ]
+}

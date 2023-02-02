@@ -1,0 +1,336 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "b0f1a572-6fcf-4980-a8b2-191044f7a071": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "subheading": "Explore your senses with  tea",
+        "title": "a monthly gift right to your door",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=yQFlI15JI9c",
+        "background_type": "full_width",
+        "video_size": "large",
+        "autoplay": true,
+        "background": "{{ shop.brand.colors.secondary[1].background }}",
+        "text_color": "{{ shop.brand.colors.secondary[1].background }}"
+      }
+    },
+    "49b5222c-d72c-47af-970d-d35f6b16bc95": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "medium",
+        "image": "shopify:\/\/shop_images\/MEMBERSHIP_PAGE_-__monthly_membership_right_to_your_door__Large_5c01b237-1779-4e4f-af8f-26d4355be39f.jpg",
+        "subheading": "explore your senses with tea",
+        "title": "A MONTHLY GIFT RIGHT TO YOUR DOOR",
+        "content": "",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "middle_center",
+        "text_color": "{{ shop.brand.colors.primary[0].background }}",
+        "button_background": "{{ shop.brand.colors.primary[0].background }}",
+        "button_text_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "overlay_color": "{{ shop.brand.colors.primary[0].foreground }}",
+        "overlay_opacity": 55
+      }
+    },
+    "19532fc4-801e-4f45-b757-d7c5833d1662": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-gift",
+            "custom_icon_width": 50,
+            "title": "a monthly surprise",
+            "content": "<p>monthly memberships delivered straight to your door!<\/p>"
+          }
+        },
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon_width": 50,
+            "title": "there's more!",
+            "content": "<p>each delivery has three samples + you get in store discounts +  more<\/p>"
+          }
+        },
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-0": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-love",
+            "custom_icon_width": 50,
+            "title": "celebrate someone",
+            "content": "<p>a great gift for you & any tea lover in your life!<\/p>"
+          }
+        },
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "your personal touch",
+            "content": "<p>We love adding a personal note to the first box so it's extra special!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-2",
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-1",
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-0",
+        "template--15693626409115__19532fc4-801e-4f45-b757-d7c5833d1662-167052043458db01f8-3"
+      ],
+      "settings": {
+        "background": "{{ shop.brand.colors.secondary[1].background }}",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "1e31a972-1e7b-44c4-8523-15b0c1905f6a": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--15693626409115__1e31a972-1e7b-44c4-8523-15b0c1905f6a-1670519722b8b2d3d2-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "tea-of-the-month-membership",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15693626409115__1e31a972-1e7b-44c4-8523-15b0c1905f6a-1670519722b8b2d3d2-0"
+      ],
+      "settings": {
+        "subheading": "CHOOSE 3, 6, OR 12 MONTHS!",
+        "title": "SAMPLE.  LEARN.  ENJOY!",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 3,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5c8bf3b2-5c74-4112-8907-288f2700c1d6": {
+      "type": "timeline",
+      "blocks": {
+        "template--15693626409115__5c8bf3b2-5c74-4112-8907-288f2700c1d6-16705204348237e5e3-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/debby-hudson-FO4gzqI2t84-unsplash.jpg",
+            "label": "education",
+            "title": "EDUCATION.",
+            "content": "<ul><li>Receive a monthly flyer full of fun facts, health benefits, & recipes to explore your knowledge and daily use of tea!<\/li><li>Look out for other fun surprises!<\/li><\/ul>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--15693626409115__5c8bf3b2-5c74-4112-8907-288f2700c1d6-16705204348237e5e3-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MEMBERSHIP_PAGE_-_explore_-_option_2_Large_fd2901de-4e5b-4696-a03a-3482fd25f1c5.jpg",
+            "label": "explore",
+            "title": "EXPLORE.",
+            "content": "<ul><li>Teas are seasonally selected, alternating each month to include herbal, green, and black teas.<\/li><li>Along with our specialty teas, this offers a comprehensive scope of the world of tea!<\/li><\/ul>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--15693626409115__5c8bf3b2-5c74-4112-8907-288f2700c1d6-16705204348237e5e3-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/marisa-harris-sRj5-M5MREo-unsplash.jpg",
+            "label": "value",
+            "title": "VALUE.",
+            "content": "<ul><li>Receive a <strong>15% discount <\/strong>on 1-4 oz sizes of any of the 3 featured teas.<\/li><li>When ordering by the half or full pound, please enjoy the <strong>wholesale price<\/strong> on teas you are enjoying!<\/li><li>These discounts apply to any of your favorite teas, anytime during your membership!<\/li><\/ul>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "33a6efba-fb90-40ec-aff6-388dc9123ef3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pars-sahin-WP86vA-Sx4c-unsplash.jpg",
+            "label": "pioneer",
+            "title": "PIONEER.",
+            "content": "<ul><li>Be the first to try new & exciting tea.o.graphy blends & offerings!<\/li><li>You are invited to take part in the blending process by offering your opinions on new blends to come.<\/li><\/ul>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15693626409115__5c8bf3b2-5c74-4112-8907-288f2700c1d6-16705204348237e5e3-0",
+        "template--15693626409115__5c8bf3b2-5c74-4112-8907-288f2700c1d6-16705204348237e5e3-1",
+        "template--15693626409115__5c8bf3b2-5c74-4112-8907-288f2700c1d6-16705204348237e5e3-2",
+        "33a6efba-fb90-40ec-aff6-388dc9123ef3"
+      ],
+      "settings": {
+        "subheading": "The surprises that come",
+        "title": "with a little box",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "f80929d8-36e5-41ff-9752-cddd6ac53fb5": {
+      "type": "faq",
+      "blocks": {
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-0": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-1": {
+          "type": "question",
+          "settings": {
+            "title": "What is the cost for shipping?",
+            "answer": "<ul><li>Memberships receive free shipping on tea of the month deliveries! This offer only apply to US members - including Alaska & Hawaii.<\/li><\/ul>"
+          }
+        },
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-2": {
+          "type": "question",
+          "settings": {
+            "title": "When will my monthly box ship?",
+            "answer": "<ul><li>Membership orders placed <strong>by or before the 15th<\/strong> of each month will ship by the 3rd week of the month.<\/li><li>All subsequent monthly boxes will ship by the 3rd week of each month.<\/li><li>All membership orders received <strong>after the 15th<\/strong> of each month will begin shipping the <span style=\"text-decoration:underline\"><strong>following month<\/strong><\/span><strong> <\/strong>(around the 3rd week). <\/li><li>December orders <strong>placed by December 1st <\/strong>will arrive in time for Christmas!<\/li><\/ul>"
+          }
+        },
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-3": {
+          "type": "category",
+          "settings": {
+            "title": "TEA SELECTION"
+          }
+        },
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-4": {
+          "type": "question",
+          "settings": {
+            "title": "What teas do I get?",
+            "answer": "<ul><li>The teas found in each box are pre-selected and follow a monthly theme.<\/li><li>Each box includes 1 caffeine free tea + 2 caffeinated teas (in the form of a green, black, and\/or specialty tea).<\/li><li>The only exception is in June. In this month we explore the Camellia Sinensis (tea) plant - which is naturally caffeinated. In this box, you will receive 4 samples of teas ranging from very low caffeine content to a high caffeine content. <\/li><\/ul>"
+          }
+        },
+        "d236f2ab-1294-418c-99f9-0cd090d33527": {
+          "type": "question",
+          "settings": {
+            "title": "Can I adjust for a different tea?",
+            "answer": "<ul><li>We currently are not able to make adjustments to the tea type or variety that is shipped within each box. <\/li><\/ul>"
+          }
+        },
+        "0d9f1115-550b-42b6-9402-4c974da989f9": {
+          "type": "question",
+          "settings": {
+            "title": "How can I personalize the box?",
+            "answer": "<ul><li>If you have a special request - such as a personalized note to be included in the box, any additional teas to include at the membership discount, etc - please <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">reach out<\/a>.  <\/li><li>We love making these boxes as personalized and special as possible!<\/li><\/ul>"
+          }
+        },
+        "ad628fa1-0aa3-4e7a-a2f5-29b2879b4d9c": {
+          "type": "category",
+          "settings": {
+            "title": "MEMBERSHIP DISCOUNTS"
+          }
+        },
+        "6b67f260-ccf7-44c1-a744-6d7dcd7c9e64": {
+          "type": "question",
+          "settings": {
+            "title": "How do I apply my membership discount?",
+            "answer": "<ul><li>Please email your order to <a href=\"mailto:orders@tea-o-graphy.com\"><strong>orders@tea-o-graphy.com<\/strong><\/a><strong> <\/strong> <\/li><li>From there, we will be able to apply your discount and will send you an invoice with a variety of payment options.<\/li><\/ul>"
+          }
+        },
+        "7429f94e-312a-4bf5-93a0-4f92c4744f34": {
+          "type": "category",
+          "settings": {
+            "title": "OTHER QUESTIONS"
+          }
+        },
+        "7f405e27-e153-4e47-8f57-60a434f22cf2": {
+          "type": "question",
+          "settings": {
+            "title": "Have another question?",
+            "answer": "<p>Please feel free to <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">contact us<\/a> with any questions!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-0",
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-1",
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-2",
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-3",
+        "template--15693626409115__f80929d8-36e5-41ff-9752-cddd6ac53fb5-16705219818902db40-4",
+        "d236f2ab-1294-418c-99f9-0cd090d33527",
+        "0d9f1115-550b-42b6-9402-4c974da989f9",
+        "ad628fa1-0aa3-4e7a-a2f5-29b2879b4d9c",
+        "6b67f260-ccf7-44c1-a744-6d7dcd7c9e64",
+        "7429f94e-312a-4bf5-93a0-4f92c4744f34",
+        "7f405e27-e153-4e47-8f57-60a434f22cf2"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "title": "Questions about our boxes",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "92727d7c-f0d9-4aae-a70c-6a52b5af2c38": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "5b8b1359-230a-4ce2-95c7-466312826a45": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "",
+            "content": "“The ‘art of tea’ is a spiritual force for us to share.”",
+            "author": "Alexandra Stoddard",
+            "background": "{{ shop.brand.colors.secondary[1].background }}",
+            "text_color": "{{ shop.brand.colors.primary[0].background }}"
+          }
+        },
+        "c6c19346-1e3b-48b8-b3af-6915f3eb901c": {
+          "type": "video",
+          "settings": {
+            "highlight": true,
+            "video_url": "https:\/\/www.youtube.com\/watch?v=hKKce5HpKCM"
+          }
+        }
+      },
+      "block_order": [
+        "5b8b1359-230a-4ce2-95c7-466312826a45",
+        "c6c19346-1e3b-48b8-b3af-6915f3eb901c"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "section_size": "small",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b0f1a572-6fcf-4980-a8b2-191044f7a071",
+    "49b5222c-d72c-47af-970d-d35f6b16bc95",
+    "19532fc4-801e-4f45-b757-d7c5833d1662",
+    "1e31a972-1e7b-44c4-8523-15b0c1905f6a",
+    "5c8bf3b2-5c74-4112-8907-288f2700c1d6",
+    "f80929d8-36e5-41ff-9752-cddd6ac53fb5",
+    "92727d7c-f0d9-4aae-a70c-6a52b5af2c38"
+  ]
+}
