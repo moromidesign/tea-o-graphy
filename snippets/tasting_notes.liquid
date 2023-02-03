@@ -1,3 +1,4 @@
+<p>Here are some of the finer details to learn about this tea. </p>
 {%- if product.metafields.custom.flavor_profile != blank -%}
   <p><b>Flavor Profile</b></br> {{ product.metafields.custom.flavor_profile | metafield_text | capitalize }}.</p>
 {%- endif -%}
@@ -7,3 +8,4 @@
 {%- if product.metafields.custom.tasting_notes != blank -%}
   <p><b>Tasting Notes</b></br> {{ product.metafields.custom.tasting_notes | metafield_text }}</p>
 {%- endif -%}
+<p></p>
