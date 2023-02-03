@@ -1,0 +1,25 @@
+{% if page.id == 60717662363 %}<script data-instant-track type="text/javascript">	var pageLibs = [		'{{ 'gem-page-60717662363.js' | asset_url }}',	];</script>{% endif %}{% if page.id == 60160868507 %}<script data-instant-track type="text/javascript">	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/gfaccordion.js",		 "https://d1um8515vdn9kb.cloudfront.net/libs/js/owl.carousel.min.js",		'{{ 'gem-page-60160868507.js' | asset_url }}',	];</script>{% endif %}{% if template == 'index.gem-1592523207-template' %}<script data-instant-track type="text/javascript">if(typeof pageLibs === 'undefined' || pageLibs === null){	var pageLibs = [		'{{ 'gem-page-index-1592523207.js' | asset_url }}',	];}</script>{% endif %}{% if page.id == 60160770203 %}<script data-instant-track type="text/javascript">	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/gfaccordion.js",		'{{ 'gem-page-60160770203.js' | asset_url }}',	];</script>{% endif %}{% if page.id == 60705276059 %}<script data-instant-track type="text/javascript">	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/gfaccordion.js",		'{{ 'gem-page-60705276059.js' | asset_url }}',	];</script>{% endif %}{% if page.id == 61163012251 %}<script data-instant-track type="text/javascript">	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/gfv3product.js",		'{{ 'gem-page-61163012251.js' | asset_url }}',	];</script>{% endif %}{% if page.id == 61167829147 %}<script data-instant-track type="text/javascript">	var pageLibs = [		"https://d1um8515vdn9kb.cloudfront.net/libs/js/gfv3product.js",		'{{ 'gem-page-61167829147.js' | asset_url }}',	];</script>{% endif %}{% if page.id == 60160999579 %}<script data-instant-track type="text/javascript">	var pageLibs = [		'{{ 'gem-page-60160999579.js' | asset_url }}',	];</script>{% endif %}{% capture gemFooterScripts %}    <script data-instant-track type="text/javascript">
+      var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());
+      if(typeof pageLibs === 'undefined' || pageLibs === null){
+        var pageLibs = [];
+      }
+      GEMVENDOR.init(pageLibs);
+      </script>
+    <script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+{% assign gemHandleCheck = '60717662363, 60160868507, 60160770203, 60705276059, 61163012251, 61167829147, 60160999579' | split: ", " %}{% for h in gemHandleCheck %}{% assign idVal = h | plus:0 %}{% if page.id == idVal %}{{ gemFooterScripts }}{% endif %}{% endfor %}{% assign gemHandleCheck = 'index.gem-1592192976-template, product.gem-1592193054-template, collection.gem-1592193055-template, index.gem-1592523207-template' | split: ", " %}{% for h in gemHandleCheck %}{% if template == h %}{{ gemFooterScripts }}{% endif %}{% endfor %}
+      {% if GEM_FOOTER_SCRIPT %}
+      {{ GEM_FOOTER_SCRIPT }}
+      {% else %}
+            <script data-instant-track type="text/javascript">
+      var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());
+      if(typeof pageLibs === 'undefined' || pageLibs === null){
+        var pageLibs = [];
+      }
+      GEMVENDOR.init(pageLibs);
+      </script>
+    <script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+
+      {% endif%}    {% if shop.metafields.gpGlobalConfigs.enableProductSchema == "true" or shop.metafields.gpGlobalConfigs.enableProductSchema == blank %}
+      {{ GEM_SCHEMA_SCRIPT }}
+    {% endif %}

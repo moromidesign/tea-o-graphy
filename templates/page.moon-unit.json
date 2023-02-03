@@ -1,0 +1,284 @@
+{
+  "sections": {
+    "3d06f4af-d546-4111-be24-6e46020d4890": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "reveal_on_scroll": true,
+        "section_height": "auto",
+        "image": "shopify:\/\/shop_images\/moon-unit_color_10aa9100-75a3-4896-b9eb-64764548912c.jpg",
+        "subheading": "",
+        "title": "",
+        "content": "<p><\/p>",
+        "button_text": "",
+        "button_link": "",
+        "link_style": "link",
+        "background_type": "boxed",
+        "text_width": "medium",
+        "text_position": "middle_center",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": false,
+        "page_width": "medium"
+      }
+    },
+    "a151bd96-72d4-44e9-afdf-3b182513512a": {
+      "type": "image-with-text-block",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/moon_unit_pic_2.jpg",
+        "subheading": "I have immersed myself in",
+        "title": "the world of Tea",
+        "content": "<p>The plant, its terrains, history, rituals, and accompanying accoutrements; it has become a passion, a meditation, a reset and a life path.<\/p>",
+        "button_text": "shop moon unit",
+        "button_link": "#block-template--15724575457435__e3fad1e8-0167-4769-b822-89a3013c2861-template--15724575457435__e3fad1e8-0167-4769-b822-89a3013c2861-166853963493525d86-0",
+        "background_type": "boxed",
+        "text_position": "left",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "f51cd0bf-691c-4541-972f-d13214798ad9": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "A gift from my teacher",
+        "title": "a jar of chai spices",
+        "content": "<p><strong>I have been obsessed ever since I was a baby when I was given a bottle full of Typhoo with plenty of milk and sugar.<\/strong><\/p><p><\/p><p>When I began practicing yoga, a teacher I loved served homemade chai and she would gift her students a small jar of the simple ingredients so we could make it ourselves at home. Cinnamon sticks, a piece of ginger, some cardamom pods, black peppercorns and some loose black tea.<\/p><p><\/p><p>This simple jar was my lightbulb moment and the nudge I needed to discover the art of blending to satisfy my palate. I began experimenting by first tasting every chai I could get my hands on, then I altered my own blends by adding additional spices that pleased my senses.<\/p><p><\/p><p><em>(Turns out I am an easy cinnamon, heavy cardamom, extra nutmeg, star anise, Assam, and milk on the stovetop kind of person!)<\/em><\/p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "large",
+        "text_position": "left",
+        "text_alignment": "left",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6f81f1ef-a56f-4f73-82d5-3ae13716eb1c": {
+      "type": "promotion-blocks",
+      "blocks": {
+        "template--15724575457435__6f81f1ef-a56f-4f73-82d5-3ae13716eb1c-166967027804ce1a5b-1": {
+          "type": "quote",
+          "settings": {
+            "highlight": false,
+            "subheading": "You can taste her impeccability.",
+            "content": "The moment I met Dana and tasted her blends, my gut said LEAP.",
+            "author": "xx Moon",
+            "background": "#faf9f6",
+            "text_color": "#000000"
+          }
+        },
+        "dcd7bfe7-b0e3-4626-86c1-81220bb5ed50": {
+          "type": "featured_products",
+          "settings": {
+            "highlight": true,
+            "subheading": "SOME FAVORITE MOON UNIT TEA",
+            "product_1": "moon-unit-tea-totally-assam",
+            "product_2": "laurel-canyon-chai",
+            "product_3": "",
+            "product_4": "",
+            "background": "#faf9f6",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--15724575457435__6f81f1ef-a56f-4f73-82d5-3ae13716eb1c-166967027804ce1a5b-1",
+        "dcd7bfe7-b0e3-4626-86c1-81220bb5ed50"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "section_size": "large",
+        "stack_on_mobile": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "5bc0b51e-41d4-4b84-9df1-6a30daf6ae50": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15724575457435__5bc0b51e-41d4-4b84-9df1-6a30daf6ae50-166854117572c1c0f7-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/moon_unit_pic_1.jpg",
+            "tab_label": "",
+            "subheading": "an orchestra of senses",
+            "title": "tea is music",
+            "content": "<p>As I grew up and dove deeper into the world of Tea - the plant, its terrains, history, rituals, and accompanying accoutrements - it has become a passion, a meditation, a reset and a life path.<\/p><p>Tea is mouth music that changes with the seasons, the bees, the region, how it is harvested and when, the scenting or flavoring, the hands and hearts and minds that pick and twist the leaves, the water that is used, the kettle, the tea pot, the clay, the cup, the lip, the size, the amount, the intention, the location, the sound, the brew time, the brew technique, the milk you add or don’t, the sweetener you add or don’t, the steep order, the time of day, what you ate earlier or consume with it, and on and on… Endless play, endless expressions, endless freedom, bottomless joy. <\/p><p> <\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15724575457435__5bc0b51e-41d4-4b84-9df1-6a30daf6ae50-166854117572c1c0f7-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "boxed",
+        "background_overlap": "image",
+        "image_position": "right",
+        "text_alignment": "left",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "2acb7482-3ba6-4912-95b6-bad6278dddc2": {
+      "type": "multi-column",
+      "blocks": {
+        "template--15724575457435__2acb7482-3ba6-4912-95b6-bad6278dddc2-1669670278d0dbfc00-0": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p>Dana’s taste buds make me weep with happiness. She is collaborative, professional, imaginative, full of integrity, fun, artful and kind. I am grateful for<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15724575457435__2acb7482-3ba6-4912-95b6-bad6278dddc2-1669670278d0dbfc00-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p> the chance to be a part of her whole. As I look to the future I hope to travel with Dana and buy directly from sustainable Tea farms with ethical and organic <\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15724575457435__2acb7482-3ba6-4912-95b6-bad6278dddc2-1669670278d0dbfc00-2": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "",
+            "content": "<p>practices around the world. I hope you love our tea. I am very proud of what we bring to you. There is love in every cup.  <\/p><p><em>xx Moon<\/em><\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "left",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--15724575457435__2acb7482-3ba6-4912-95b6-bad6278dddc2-1669670278d0dbfc00-0",
+        "template--15724575457435__2acb7482-3ba6-4912-95b6-bad6278dddc2-1669670278d0dbfc00-1",
+        "template--15724575457435__2acb7482-3ba6-4912-95b6-bad6278dddc2-1669670278d0dbfc00-2"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "subheading": "MAKING TEA TOGETHER",
+        "title": "WITH LOVE IN EVERY CUP",
+        "content": "",
+        "column_alignment": "left",
+        "mobile_item_size": "large",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "{{ shop.brand.colors.secondary[1].background }}",
+        "text_color": "{{ shop.brand.colors.primary[0].background }}"
+      }
+    },
+    "0eed25e5-616a-4345-b8d3-ff7822d35d5d": {
+      "type": "shop-the-look",
+      "disabled": true,
+      "blocks": {
+        "template--15724575457435__0eed25e5-616a-4345-b8d3-ff7822d35d5d-1669670334d98ecabb-0": {
+          "type": "look",
+          "settings": {
+            "dot_type": "inverted",
+            "product_1": "",
+            "product_1_horizontal_position": 41,
+            "product_1_vertical_position": 41,
+            "product_1_horizontal_position_mobile": 30,
+            "product_1_vertical_position_mobile": 30,
+            "product_2": "",
+            "product_2_horizontal_position": 46,
+            "product_2_vertical_position": 64,
+            "product_2_horizontal_position_mobile": 50,
+            "product_2_vertical_position_mobile": 50,
+            "product_3": "",
+            "product_3_horizontal_position": 62,
+            "product_3_vertical_position": 50,
+            "product_3_horizontal_position_mobile": 70,
+            "product_3_vertical_position_mobile": 70
+          }
+        }
+      },
+      "block_order": [
+        "template--15724575457435__0eed25e5-616a-4345-b8d3-ff7822d35d5d-1669670334d98ecabb-0"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "label": "Shop the looks"
+      }
+    },
+    "e3fad1e8-0167-4769-b822-89a3013c2861": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--15724575457435__e3fad1e8-0167-4769-b822-89a3013c2861-166853963493525d86-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "moon-unit",
+            "label": "our creation",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15724575457435__e3fad1e8-0167-4769-b822-89a3013c2861-166853963493525d86-0"
+      ],
+      "settings": {
+        "subheading": "all we are making together",
+        "title": "moon unit shop",
+        "content": "",
+        "products_count": 42,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "3d06f4af-d546-4111-be24-6e46020d4890",
+    "main",
+    "a151bd96-72d4-44e9-afdf-3b182513512a",
+    "f51cd0bf-691c-4541-972f-d13214798ad9",
+    "6f81f1ef-a56f-4f73-82d5-3ae13716eb1c",
+    "5bc0b51e-41d4-4b84-9df1-6a30daf6ae50",
+    "2acb7482-3ba6-4912-95b6-bad6278dddc2",
+    "0eed25e5-616a-4345-b8d3-ff7822d35d5d",
+    "e3fad1e8-0167-4769-b822-89a3013c2861"
+  ]
+}
