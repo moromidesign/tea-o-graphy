@@ -1,0 +1,250 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "5e26f944-1b27-4a27-b5c1-92f0b2c778ee": {
+      "type": "video",
+      "settings": {
+        "subheading": "A MONTHLY GIFT RIGHT TO YOUR DOOR....",
+        "title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "background_type": "full_width",
+        "video_size": "small",
+        "autoplay": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "fcb52d0d-0610-45f8-ae3a-aa27524773f8": {
+      "type": "collection-list",
+      "blocks": {
+        "template--15665624940699__fcb52d0d-0610-45f8-ae3a-aa27524773f8-1668198102f8f5b8ce-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--15665624940699__fcb52d0d-0610-45f8-ae3a-aa27524773f8-1668198102f8f5b8ce-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "template--15665624940699__fcb52d0d-0610-45f8-ae3a-aa27524773f8-1668198102f8f5b8ce-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "template--15665624940699__fcb52d0d-0610-45f8-ae3a-aa27524773f8-1668198102f8f5b8ce-0",
+        "template--15665624940699__fcb52d0d-0610-45f8-ae3a-aa27524773f8-1668198102f8f5b8ce-1",
+        "template--15665624940699__fcb52d0d-0610-45f8-ae3a-aa27524773f8-1668198102f8f5b8ce-5"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "grid",
+        "subheading": "CHOOSE 3, 6, OR 12 MONTHS!",
+        "title": "sample.  learn.  enjoy!",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "a92941ac-5275-438e-922e-17d2fcbbc0c4": {
+      "type": "multi-column",
+      "blocks": {
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-0": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "EDUCATION.",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-1": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "EXPLORE.",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-2": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "VALUE.",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        },
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-3": {
+          "type": "item",
+          "settings": {
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "PIONEER.",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-0",
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-1",
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-2",
+        "template--15665624940699__a92941ac-5275-438e-922e-17d2fcbbc0c4-1668198281171c0b00-3"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "stack_items": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "medium",
+        "spacing": "normal",
+        "background": "#fff9f1",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "d175a65e-7788-4871-9c0d-66596824a8df": {
+      "type": "faq",
+      "blocks": {
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-0": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-1": {
+          "type": "question",
+          "settings": {
+            "title": "What is the cost for shipping?",
+            "answer": "<p>Memberships recieve free shipping on tea of the month deliveries!  This offer only apply to US members - including Alaska & Hawaii.<\/p>"
+          }
+        },
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-2": {
+          "type": "question",
+          "settings": {
+            "title": "When will my montly box ship?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+          }
+        },
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-3": {
+          "type": "category",
+          "settings": {
+            "title": "TEA SELECTION"
+          }
+        },
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-4": {
+          "type": "question",
+          "settings": {
+            "title": "Any question?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+          }
+        },
+        "1445b9b4-54d1-4ba6-a4ee-8b93ee275d19": {
+          "type": "category",
+          "settings": {
+            "title": "MEMBERSHIP DISCOUNTS"
+          }
+        },
+        "1e502be0-4ed9-4654-9c3a-105c1e49ec7d": {
+          "type": "question",
+          "settings": {
+            "title": "About your shop",
+            "answer": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+          }
+        },
+        "fba38329-f37d-49de-a875-f4be735c1f2b": {
+          "type": "category",
+          "settings": {
+            "title": "OTHER QUESTIONS?"
+          }
+        },
+        "44ce884e-025c-4271-8666-49c4e4c03d4f": {
+          "type": "question",
+          "settings": {
+            "title": "Contact Us!",
+            "answer": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-0",
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-1",
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-2",
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-3",
+        "template--15665624940699__d175a65e-7788-4871-9c0d-66596824a8df-1668198103ef67b952-4",
+        "1445b9b4-54d1-4ba6-a4ee-8b93ee275d19",
+        "1e502be0-4ed9-4654-9c3a-105c1e49ec7d",
+        "fba38329-f37d-49de-a875-f4be735c1f2b",
+        "44ce884e-025c-4271-8666-49c4e4c03d4f"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "MEMBERSHIP TERMS",
+        "content": "",
+        "background": "#ffffff",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "5e26f944-1b27-4a27-b5c1-92f0b2c778ee",
+    "fcb52d0d-0610-45f8-ae3a-aa27524773f8",
+    "a92941ac-5275-438e-922e-17d2fcbbc0c4",
+    "d175a65e-7788-4871-9c0d-66596824a8df"
+  ]
+}

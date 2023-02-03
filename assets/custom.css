@@ -1,0 +1,379 @@
+/* CSS file for extending customizations of theme created 10.13.22 */
+/* Written by Isa Stewart */
+
+/* Typography (headings) */
+@font-face {
+  font-family: "American Typewriter";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.shopify.com/s/files/1/0398/2327/8235/files/American_Typewriter_Regular.ttf?v=1673307865")
+    format("woff2");
+}
+@font-face {
+  font-family: "American Typewriter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.shopify.com/s/files/1/0398/2327/8235/files/American_Typewriter_Bold.woff2?v=1673308058")
+    format("woff2");
+}
+
+:root {
+  --heading-font-family: "American Typewriter", "Special Elite",
+    "DIN Neuzeit Grotesk", sans-serif;
+  --nav-font-family: "DIN Neuzeit Grotesk", sans-serif;
+  --heading-medium-font-size: 13px;
+  --root-heading-color: black;
+}
+@media screen and (max-width: 741px) {
+  :root {
+    --heading-medium-font-size: 12px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font-family);
+}
+
+nav a.header__linklist-link {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: var(--nav-font-family);
+}
+h1,
+h2,
+h2.heading.heading--small,
+h2.heading.heading--xsmall,
+h2.heading.heading--xxsmall,
+h3.heading.heading--small,
+h3.heading.heading--xsmall,
+h3.heading.heading--xxsmall {
+  font-family: var(--heading-font-family);
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+h2.heading.heading--small,
+h2.heading.heading--xsmall,
+h2.heading.heading--xxsmall,
+h3.heading.heading--small,
+h3.heading.heading--xsmall,
+h3.heading.heading--xxsmall {
+  text-transform: lowercase;
+}
+h2.heading--small {
+  font-size: var(--heading-medium-font-size);
+}
+h3,
+.heading,
+h2.heading,
+h3.heading.h3,
+h3.heading.h2,
+h3.heading.heading--large,
+h3.article-item__title.heading.h4,
+p.article-item__category.heading.heading--xsmall,
+h1.product-meta__title.heading.h3 {
+  letter-spacing: 2px;
+}
+h4,
+p.heading.h4,
+h5,
+h6,
+p.heading.h5 {
+  letter-spacing: 1.6px;
+}
+.text-container h3.heading.h2 {
+  line-height: 1.3;
+}
+
+.center-justify {
+  display: flex;
+  justify-content: center;
+}
+
+input.checkbox:checked {
+  background-color: black;
+}
+
+.footer__item.footer__item--image.is-first {
+  display: flex;
+  justify-content: center;
+}
+.shopify-section--main-list-collections header.page-header {
+  display: none;
+}
+.page-header__text-wrapper h1.heading.h1 {
+  font-size: var(--heading-h4-font-size);
+  letter-spacing: 2px;
+}
+a.product-item__title,
+span.shop-the-look__product-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+blockquote.testimonial__content.blockquote {
+  text-transform: lowercase;
+  line-height: 1.4;
+  font-size: xxx-large;
+}
+
+a.product-item-meta__title {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+
+/* PRODUCT PAGE EDITS on Desktop Dec29-22 */
+
+@media screen and (min-width: 1000px) {
+  /* These edits are only on the tea product page   */
+  /* Make payment buttons side by side on tea product pages */
+  #shopify-section-template--15749514264731__main
+    .product-form__payment-container {
+    display: flex;
+  }
+  #shopify-section-template--15749514264731__main
+    button.product-form__add-button {
+    width: 50%;
+  }
+  #shopify-section-template--15749514264731__main .shopify-payment-button {
+    width: 50%;
+  }
+  /* Fix sticky add to cart */
+  #shopify-section-template--15749514264731__main .product-sticky-form .button {
+    width: 100%;
+  }
+  /* Removing excess whitespace in product meta */
+  .product__info .product-meta {
+    display: block;
+    margin: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+/* Brewing method desktop fix */
+@media screen and (min-width: 1000px) {
+  #brewing_method
+    .product-tabs__tab-item-wrapper
+    .brewing_method_text.collapsible {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  #brewing_method
+    .product-tabs__tab-item-wrapper
+    .brewing_method_text.collapsible[open] {
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+  }
+}
+
+.product-content__featured-data-list {
+  margin-top: 32px;
+}
+.product-content__featured-data {
+  background-color: rgb(var(--secondary-background));
+  width: 100%;
+  --details-offset: 15px;
+  padding: var(--details-offset);
+}
+
+/* new flex container for featured product and details */
+.product-content {
+  grid-gap: calc(var(--grid-gap) * 1.8);
+}
+.product-contect__featured_data-and-product {
+  display: flex;
+  grid-gap: calc(var(--grid-gap) * 2);
+  flex-direction: column;
+}
+.product-content__featured_data-and-product {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 1000px) {
+  .product-contect__featured_data-and-product {
+  }
+}
+
+/* PRODUCT LISTS SECTIONS */
+
+/* to center memberships - may work when live? need a page specific class or id not available in staging Dec 12 */
+/* .product-list.product-list--center .product-list__inner:last-child {
+  display: flex;
+} */
+
+.product-list--center .product-list__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-list--center .product-list__inner .product-item {
+  position: relative;
+  display: inline;
+  margin: 0;
+  flex: 1 0 127px;
+}
+
+.product-meta__price-list-container,
+.product-item-meta__price-list-container,
+.product-item__price-list-container {
+  font-family: var(--heading-font-family);
+  letter-spacing: 2px;
+  color: #7d7d7d;
+}
+.product-item-meta__price-list-container,
+.product-item__price-list-container {
+  font-size: small;
+}
+
+span.product-form__quantity-label,
+span.product-form__option-name,
+.product-meta__share-label.hidden-phone {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4f4f4f;
+  font-size: small;
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --vertical-breather: 64px;
+    --vertical-breather-tight: 48px;
+    --product-list-block-spacing: 48px;
+    --heading-large-font-size: 58px;
+    --heading-h1-font-size: 36px;
+    --heading-h2-font-size: 32px;
+    --heading-h3-font-size: 27px;
+    --heading-h4-font-size: 24px;
+    --heading-h5-font-size: 21px;
+    --heading-h6-font-size: 18px;
+  }
+  .h2,
+  .rte h2 {
+    letter-spacing: 1.5px;
+  }
+}
+/* Search text UPPERCASE */
+/* .predictive-search__input {
+    text-transform: uppercase;
+    font-size: small;
+} */
+.predictive-search__input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #909;
+}
+.predictive-search__input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #909;
+  opacity: 1;
+}
+.predictive-search__input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #909;
+  opacity: 1;
+}
+.predictive-search__input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #909;
+}
+.predictive-search__input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #909;
+}
+
+#predictive-search-form input.predictive-search__input::placeholder,
+.predictive-search__form input.predictive-search__input::placeholder {
+  /* Most modern browsers support this now. */
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: small;
+}
+
+/* 
+#   OVERLAY GRADIENTS for text applied per section
+*/
+
+/* Tea Fam on about page */
+#shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+  image-with-text-overlay.image-overlay--large {
+  object-fit: contain;
+  --image-height: calc(100vw / 2.05);
+}
+#shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+  image-with-text-overlay
+  .image-overlay__image-wrapper:after {
+  background-image: linear-gradient(
+    15deg,
+    rgba(255, 255, 255, 0.8) 22%,
+    rgba(255, 255, 255, 0.3) 27%,
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+@media screen and (max-width: 1024px) {
+  #shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+    image-with-text-overlay
+    .image-overlay__image-wrapper:after {
+    /*     background-image: unset; */
+    background: rgba(255, 255, 255, 0.1);
+  }
+  #shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+    image-with-text-overlay
+    .image-overlay__image {
+    height: var(--image-height);
+  }
+  #shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+    image-with-text-overlay.image-overlay--large {
+    height: calc(100vw / 2.05 + 160px);
+  }
+}
+/* Wholesale top image */
+#shopify-section-template--15745038909595__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
+  .image-overlay__image-wrapper:after {
+  background: unset;
+
+  background-image: linear-gradient(
+    55deg,
+    rgb(255 255 255 / 90%) 21%,
+    rgb(255 255 255 / 50%) 47%,
+    transparent
+  );
+}
+@media screen and (max-width: 1024px) {
+  #shopify-section-template--15745038909595__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
+    .image-overlay__image-wrapper:after {
+    background: unset;
+    background: rgb(255 255 255 / 75%);
+  }
+}
+
+/* 
+#  ASSORTED CHANGES
+*/
+
+/* changes to testimonial section text size */
+blockquote.testimonial__content.blockquote {
+  font-size: xx-large;
+}
+
+/* hide asterisk in footer copyright  */
+.footer__copyright .square-separator {
+  display: none;
+}
+
+/* center the copyright horizontally */
+.container .footer__inner .footer__aside {
+  justify-content: center;
+}
+
+@media screen and (max-width: 740px) {
+  .logo-list__item:nth-last-child(1):nth-child(odd) {
+    margin: 0 50%;
+    width: 100%;
+  }
+}
