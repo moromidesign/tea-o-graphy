@@ -1,7 +1,0 @@
-$PROJECT_DIR/themekit_ignores
-$PROJECT_DIR/config
-$PROJECT_DIR/.nova
-
-*.png
-
-/\.(txt|md|hint)$/
