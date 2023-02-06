@@ -82,7 +82,7 @@
           "type": "liquid",
           "settings": {
             "title": "Tasting Notes",
-            "liquid": "{% render 'tasting_notes.liquid' %}"
+            "liquid": "{% render 'tasting-notes.liquid' %}"
           }
         },
         "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7": {
