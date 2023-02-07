@@ -73,12 +73,13 @@
           "5d407a25-32ae-49a9-b115-3ef4769a3f9b": {
             "type": "message",
             "settings": {
-              "text": "Welcome to our new website!!",
-              "learn_more_text": "Experiencing an issue?",
-              "title": "Welcome to our new site!",
-              "content": "<p>We launched our new site on January 10 and we hope you love it!! You may notice ongoing changes as we get things dialed in. Purchasing should work as usual, and in case you run into an issue feel free to <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">reach out to us<\/a>.<\/p>",
-              "button_text": "get in touch",
-              "button_link": "shopify:\/\/pages\/contact"
+              "text": "15% OFF ALL ROSE TEAS!",
+              "learn_more_text": "",
+              "image": "shopify:\/\/shop_images\/8F5F9F73-B000-4B30-885C-6420AF357637.jpg",
+              "title": "CELEBRATING LOVE!",
+              "content": "<p>Use dicount code: ROSESARERED at check out for 15% off all Rose Teas*  & our Rose Tea Sampler box!  <\/p><p>*Rose Teas: <a href=\"https:\/\/tea-o-graphy.com\/products\/chocolate-rose-oolong?_pos=1&_psq=chocolate&_ss=e&_v=1.0\" title=\"https:\/\/tea-o-graphy.com\/products\/chocolate-rose-oolong?_pos=1&_psq=chocolate&_ss=e&_v=1.0\">Chocolate Rose Oolong<\/a>, <a href=\"https:\/\/tea-o-graphy.com\/products\/fleurs-de-provence?_pos=1&_psq=fleurs&_ss=e&_v=1.0\" title=\"https:\/\/tea-o-graphy.com\/products\/fleurs-de-provence?_pos=1&_psq=fleurs&_ss=e&_v=1.0\">Fleurs de Provence<\/a>, <a href=\"https:\/\/tea-o-graphy.com\/products\/peppermint-rose-chai?_pos=1&_psq=peppermint&_ss=e&_v=1.0\" title=\"https:\/\/tea-o-graphy.com\/products\/peppermint-rose-chai?_pos=1&_psq=peppermint&_ss=e&_v=1.0\">Peppermint Rose Chai<\/a>, <a href=\"https:\/\/tea-o-graphy.com\/products\/sandia-rose?_pos=1&_psq=sandia&_ss=e&_v=1.0\" title=\"https:\/\/tea-o-graphy.com\/products\/sandia-rose?_pos=1&_psq=sandia&_ss=e&_v=1.0\">Sandia Rose<\/a>, &\/or <a href=\"https:\/\/tea-o-graphy.com\/products\/tea-samplers?_pos=1&_sid=cf6bab0a2&_ss=r\" title=\"https:\/\/tea-o-graphy.com\/products\/tea-samplers?_pos=1&_sid=cf6bab0a2&_ss=r\">Rose Tea Sampler Box<\/a><\/p><p>Now until  Feb 14, 2023 at 11:59 PM MST<\/p><p><\/p>",
+              "button_text": "Shop rose teas",
+              "button_link": "shopify:\/\/collections\/rose-teas-gift-box"
             }
           }
         },
@@ -87,12 +88,12 @@
           "5d407a25-32ae-49a9-b115-3ef4769a3f9b"
         ],
         "settings": {
-          "announcement_bar_position": "non_sticky",
+          "announcement_bar_position": "sticky",
           "announcement_text_size": "small",
           "autoplay": true,
           "cycle_speed": 5,
-          "background": "#7a90c6",
-          "text_color": "{{ shop.brand.colors.primary[0].foreground }}",
+          "background": "#f1b4b4",
+          "text_color": "#100f0f",
           "button_background": "#282828",
           "button_text_color": "#ffffff"
         }
