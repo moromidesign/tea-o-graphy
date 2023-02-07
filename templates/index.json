@@ -3,6 +3,25 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "89df01b7-b1b2-435e-b8f3-56d009270c01": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home-slide-valentines-special-peppermint-rose-tea-desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/home-slide-valentines-special-peppermint-rose-tea-mobile.jpg",
+            "text_position": "middle_left",
+            "subheading": "CODE: ROSESARERED",
+            "title": "HOT-TEA.",
+            "button_1_text": "15% OFF ROSE TEAS",
+            "button_1_link": "shopify:\/\/collections\/rose-teas-gift-box",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#000000",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 9
+          }
+        },
         "slide-1": {
           "type": "image",
           "settings": {
@@ -43,6 +62,7 @@
         }
       },
       "block_order": [
+        "89df01b7-b1b2-435e-b8f3-56d009270c01",
         "slide-1",
         "slide-2"
       ],
