@@ -437,6 +437,15 @@
   "shopify": {
     "links": {
       "powered_by_shopify": " "
+    },
+    "checkout": {
+      "alternative_payment_method_banner": {
+        "express_checkout": "OPTION 1: EXPRESS CHECKOUT METHODS",
+        "or": "OPTION 2: CREDIT AND DEBIT CARDS"
+      },
+      "payment_summary": {
+        "express_payment_gateway_label": "Optional Express Payment Methods"
+      }
     }
   }
 }
