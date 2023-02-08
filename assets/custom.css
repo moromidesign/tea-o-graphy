@@ -405,21 +405,29 @@ blockquote.testimonial__content.blockquote {
   padding: 0 0px 0 6px;
   max-width: 100%;
 }
-.recipe-card #rk_parent .rk_modern .rk_container .rk_metam,
-.recipe-card #rk_parent h4.rk_group_heading {
+.recipe-card #rk_parent .rk_container h2.rk_meta,
+.recipe-card
+  #rk_parent
+  .rk_modern
+  .rk_container
+  .rk_ingredients
+  h4.rk_group_heading {
   font-size: var(--heading-small-font-size);
 }
 .recipe-card #rk_parent .rk_modern .rk_container .rk_grid .rk_primary {
   flex: 1 0 40%;
 }
 .recipe-card #rk_parent .rk_modern .rk_container .rk_meta {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-#rk_parent .rk_modern .rk_container .rk_details .rk_column {
+.recipe-card #rk_parent .rk_modern .rk_container .rk_details .rk_column {
   float: none;
-  flex: 50%;
-  padding-bottom: 27px;
-  padding-right: 0;
+  flex: 1 1 119px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .recipe-card #rk_parent .rk_modern .rk_container .rk_social {
   display: flex;
@@ -429,9 +437,14 @@ blockquote.testimonial__content.blockquote {
   display: flex;
   margin: 13px 0;
   flex-wrap: wrap;
+  gap: 18px;
 }
 .recipe-card #rk_parent .rk_modern .rk_container .rk_social li {
   margin: 0 12px;
   flex: 0 1 20px;
   padding: 0px;
+}
+.recipe-card #rk_parent .rk_modern .rk_container .rk_secondary {
+  display: flex;
+  flex-direction: none;
 }
