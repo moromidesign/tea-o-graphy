@@ -306,6 +306,14 @@ span.product-form__option-name,
   color: #909;
 }
 
+/* 
+#   HOME PAGE adjust slide on mobile
+*/
+
+h3.heading.heading--large {
+    margin-right: 120px;
+}
+
 #predictive-search-form input.predictive-search__input::placeholder,
 .predictive-search__form input.predictive-search__input::placeholder {
   /* Most modern browsers support this now. */

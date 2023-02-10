@@ -110,7 +110,7 @@
           "type": "featured_data",
           "settings": {
             "title": "Tea details",
-            "details": "<p><strong>Ingredients<br\/><\/strong>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p><p><strong>Caffeine content<br\/><\/strong>{{ product.metafields.custom.caffeine_content | metafield_text }}<\/p>"
+            "details": "<p><strong>Ingredients<br\/><\/strong>{{ product.metafields.custom.ingredients | metafield_tag }}<\/p><p><strong>Caffeine content<br\/><\/strong>{{ product.metafields.custom.caffeine_content | metafield_text | downcase }}<\/p>"
           }
         }
       },
