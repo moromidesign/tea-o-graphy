@@ -83,7 +83,9 @@ h4,
 p.heading.h4,
 h5,
 h6,
-p.heading.h5 {
+p.heading.h5,
+h3.heading.h5 {
+  line-height: 1.6;
   letter-spacing: 1.6px;
 }
 .text-container h3.heading.h2 {
@@ -297,7 +299,7 @@ span.product-form__option-name,
 */
 
 h3.heading.heading--large {
-    margin-right: 120px;
+  margin-right: 120px;
 }
 
 #predictive-search-form input.predictive-search__input::placeholder,
