@@ -5,6 +5,7 @@
       "blocks": {
         "89df01b7-b1b2-435e-b8f3-56d009270c01": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/home-slide-valentines-special-peppermint-rose-tea-desktop.jpg",
             "mobile_image": "shopify:\/\/shop_images\/home-slide-valentines-special-peppermint-rose-tea-mobile.jpg",
