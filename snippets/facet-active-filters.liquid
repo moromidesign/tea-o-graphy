@@ -68,6 +68,6 @@
   {%- if request.page_type == 'collection' -%}
     <a href="{{ page_url }}?sort_by={{ sort_by }}" data-action="clear-filters" class="tag-link link text--subdued">{{ 'collection.general.clear_filters' | t }}</a>
   {%- else -%}
-    <a href="{{ page_url }}?sort_by={{ sort_by }}&q={{ search.terms | escape }}&type=product&options[prefix]=last&options[unavailable_products]={{ settings.search_unavailable_products }}" data-action="clear-filters" class="tag-link link text--subdued">{{ 'collection.general.clear_filters' | t }}</a>
+    <a href="{{ page_url }}?sort_by={{ sort_by }}&q={{ search.terms | escape }}" data-action="clear-filters" class="tag-link link text--subdued">{{ 'collection.general.clear_filters' | t }}</a>
   {%- endif -%}
 {%- endif -%}

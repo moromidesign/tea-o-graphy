@@ -35,7 +35,8 @@
 
                 {%- capture image_push -%}
                   <div class="mega-menu__image-wrapper">
-                    <img class="mega-menu__image" loading="lazy" sizes="240px" {% render 'image-attributes', image: mega_menu_block.settings[image_setting], sizes: '240,480,720' %}>
+                    {%- assign menu_image = mega_menu_block.settings[image_setting] -%}
+                    {{ menu_image | image_url: width: menu_image.width | image_tag: loading: 'lazy', sizes: '240px', sizes: '240,480,720', class: 'mega-menu__image' }}
                   </div>
 
                   {%- if mega_menu_block.settings[image_heading_setting] != '' -%}

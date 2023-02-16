@@ -4,12 +4,6 @@
   {%- assign blends_with_background = true -%}
 {%- endif -%}
 
-{%- assign use_recommendations = true -%}
-
-{%- if section.settings.products.count > 0 -%}
-  {%- assign use_recommendations = false -%}
-{%- endif -%}
-
 <style>
   #shopify-section-{{ section.id }} {
     {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
@@ -48,8 +42,8 @@
   }
 </style>
 
-<product-recommendations section-id="{{ section.id }}" product-id="{{ product.id }}" {% if use_recommendations %}use-automatic-recommendations recommendations-count="{{ section.settings.recommendations_count }}"{% endif %} class="section {% unless blends_with_background %}section--flush{% endunless %}">
-  {%- if section.settings.products.count > 0 or recommendations.performed and recommendations.products.size > 0 -%}
+<product-recommendations section-id="{{ section.id }}" intent="related" product-id="{{ product.id }}" recommendations-count="{{ section.settings.recommendations_count }}" class="section {% unless blends_with_background %}section--flush{% endunless %}">
+  {%- if recommendations.performed and recommendations.products.size > 0 -%}
     <div class="section__color-wrapper">
       <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- if section.settings.title != blank or section.settings.subheading != blank -%}
@@ -71,25 +65,16 @@
 
           <div class="scroller">
             <div class="product-list__inner product-list__inner--scroller hide-scrollbar">
-              {%- if use_recommendations -%}
-                {%- for product in recommendations.products -%}
-                  {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
+              {%- for product in recommendations.products -%}
+                {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
 
-                  {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
-                  {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
-                {%- endfor -%}
-              {%- else -%}
-                {%- for product in section.settings.products -%}
-                  {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
-
-                  {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
-                  {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
-                {%- endfor -%}
-              {%- endif -%}
+                {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
+                {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+              {%- endfor -%}
             </div>
           </div>
 
-          {%- if recommendations.products_count > 4 or section.settings.products.count > 4 -%}
+          {%- if recommendations.products_count > 4 -%}
             <prev-next-buttons class="product-list__prev-next hidden-pocket" style="--smallest-image-aspect-ratio: {{ smallest_image_aspect_ratio }}">
               <button class="product-list__arrow prev-next-button prev-next-button--prev" disabled data-action="prev">
                 <span class="visually-hidden">{{ 'general.accessibility.previous' | t }}</span>
@@ -110,13 +95,15 @@
 
 {% schema %}
 {
-  "name": "Product recommendations",
+  "name": "Related products",
   "class": "shopify-section--product-recommendations",
-  "templates": ["product"],
+  "enabled_on": {
+    "templates": ["product"]
+  },
   "settings": [
     {
       "type": "paragraph",
-      "content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products). You can manually select products by adding content."
+      "content": "Dynamic recommendations change and improve with time. Create manual product recommendations using the Shopify Search & Discovery app. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations)."
     },
     {
       "type": "text",
@@ -138,13 +125,6 @@
       "default": 4
     },
     {
-      "type": "product_list",
-      "id": "products",
-      "label": "Manual products",
-      "info": "When selected, automatic recommendations do not show.",
-      "limit": 10
-    },
-    {
       "type": "header",
       "content": "Colors"
     },
@@ -163,7 +143,7 @@
   ],
   "presets": [
     {
-      "name": "Product recommendations"
+      "name": "Related products"
     }
   ]
 }

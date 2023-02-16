@@ -91,14 +91,13 @@
                 {%- capture block_content -%}
                   {%- if block.settings.image != blank -%}
                     {%- assign block_column_ratio = 3 | at_most: section.blocks.size -%}
+
                     {%- if block.settings.highlight -%}
                       {%- assign block_column_ratio = 2 -%}
                     {%- endif -%}
 
-                    <img class="promotion-block__image"
-                         loading="lazy"
-                         sizes="(max-width: 740px) calc(100vw - 24px * 2), calc(min(100vw, 1560px) / {{ block_column_ratio }} - 20px * {{ block_column_ratio | minus: 1 }})"
-                         {% render 'image-attributes', image: block.settings.image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1800,2000,2200,2400,2600' %}>
+                    {%- capture sizes_attribute -%}(max-width: 740px) calc(100vw - 24px * 2), calc(min(100vw, 1560px) / {{ block_column_ratio }} - 20px * {{ block_column_ratio | minus: 1 }}){%- endcapture -%}
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600', class: 'promotion-block__image' -}}
                   {%- endif -%}
 
                   <div class="promotion-block__content-wrapper text-container" style="{% if block.settings.text_position contains 'center' %}text-align: center{% elsif block.settings.text_position contains 'right' %}text-align: end{% endif %}">
@@ -254,15 +253,21 @@
 
               {%- when 'video' -%}
                 <div id="block-{{ section.id }}-{{ block.id }}" class="promotion-block promotion-block--video {% if block.settings.highlight %}promotion-block--highlight{% endif %} promotion-block--{{ section.settings.section_size }}" {{ block.shopify_attributes }}>
-                  <external-video autoplay provider="{{ block.settings.video_url.type | escape }}" class="video-wrapper video-wrapper--cover">
-                    <template>
-                      {%- if block.settings.video_url.type == 'youtube' -%}
-                        <iframe title="Video" id="player-{{ section.id }}" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?playsinline=1&autoplay=1&mute=1&loop=1&playlist={{ block.settings.video_url.id }}&enablejsapi=1&controls=0&rel=0&modestbranding=1&origin=https://{{ request.host }}" allow="autoplay; fullscreen"></iframe>
-                      {%- elsif block.settings.video_url.type == 'vimeo' -%}
-                        <iframe title="Video" id="player-{{ section.id }}" src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?background=1&loop=1&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; fullscreen"></iframe>
-                      {%- endif -%}
-                    </template>
-                  </external-video>
+                  {%- if block.settings.video != blank -%}
+                    <native-video class="video-wrapper video-wrapper--native" autoplay style="--aspect-ratio: {{ block.settings.video.aspect_ratio }}">
+                      {{- block.settings.video | video_tag: controls: true, autoplay: true, playsinline: true, muted: true, loop: true -}}
+                    </native-video>
+                  {%- else -%}
+                    <external-video autoplay provider="{{ block.settings.video_url.type | escape }}" class="video-wrapper video-wrapper--cover">
+                      <template>
+                        {%- if block.settings.video_url.type == 'youtube' -%}
+                          <iframe title="Video" id="player-{{ section.id }}" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?playsinline=1&autoplay=1&mute=1&loop=1&playlist={{ block.settings.video_url.id }}&enablejsapi=1&controls=0&rel=0&modestbranding=1&origin=https://{{ request.host }}" allow="autoplay; fullscreen"></iframe>
+                        {%- elsif block.settings.video_url.type == 'vimeo' -%}
+                          <iframe title="Video" id="player-{{ section.id }}" src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?background=1&loop=1&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; fullscreen"></iframe>
+                        {%- endif -%}
+                      </template>
+                    </external-video>
+                  {%- endif -%}
                 </div>
             {%- endcase -%}
           {%- endfor -%}
@@ -287,6 +292,9 @@
   "name": "Promotion blocks",
   "class": "shopify-section--promotion-blocks",
   "max_blocks": 12,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
       "type": "text",
@@ -678,10 +686,16 @@
           "default": false
         },
         {
+          "type": "video",
+          "id": "video",
+          "label": "Video",
+          "info": "Replaces the external video if both are set."
+        },
+        {
           "type": "video_url",
           "id": "video_url",
           "accept": ["vimeo", "youtube"],
-          "label": "Video",
+          "label": "External video",
           "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
         }
       ]

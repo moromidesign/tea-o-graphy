@@ -112,10 +112,8 @@
               {%- for block in section.blocks -%}
                 {%- capture block_content -%}
                   {%- if block.settings.image != blank -%}
-                    <img class="promotion-block__image"
-                         loading="lazy"
-                         sizes="(max-width: 740px) calc(100vw - 12px * 2), calc(min(100vw, 1560px) / {{ section.blocks.size }} - 20px * {{ section.blocks.size | minus: 1 }})"
-                         {% render 'image-attributes', image: block.settings.image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600' %}>
+                    {%- capture sizes_attribute -%}(max-width: 740px) calc(100vw - 12px * 2), calc(min(100vw, 1560px) / {{ section.blocks.size }} - 20px * {{ section.blocks.size | minus: 1 }}){%- endcapture -%}
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600', class: 'promotion-block__image' -}}
                   {%- endif -%}
 
                   <div class="promotion-block__content-wrapper text-container" style="{% if block.settings.text_position contains 'center' %}text-align: center{% elsif block.settings.text_position contains 'right' %}text-align: end{% endif %}">

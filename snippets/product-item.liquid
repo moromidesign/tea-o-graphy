@@ -40,17 +40,19 @@
       </div>
     {%- endif -%}
 
-    <a href="{{ product.url }}" class="product-item__aspect-ratio aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: product.featured_media.preview_image.aspect_ratio }}%; --aspect-ratio: {{ product.featured_media.preview_image.aspect_ratio }}">
-      <img class="product-item__primary-image" loading="lazy" data-media-id="{{ product.featured_media.id | escape }}" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: product.featured_media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+    <a href="{{ product.url }}" data-instant class="product-item__aspect-ratio aspect-ratio {% if settings.product_image_size != 'natural' %}aspect-ratio--{{ settings.product_image_size }}{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: product.featured_media.preview_image.aspect_ratio }}%; --aspect-ratio: {{ product.featured_media.preview_image.aspect_ratio }}">
+      {%- if product.featured_media -%}
+        {{ product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: product.featured_media.id }}
+      {%- endif -%}
 
       {%- if settings.product_color_display == 'swatch' -%}
         {%- for color_label in color_label_list -%}
           {%- if product.options_by_name[color_label] != blank -%}
 			      {%- for color_option in product.options_by_name[color_label].values -%}
        		    {%- for variant in product.variants -%}
-      			    {%- if variant.options contains color_option -%}
+      			    {%- if variant.options contains color_option and variant.featured_media != blank -%}
           		    {%- unless variant.featured_media == product.featured_media -%}
-            		    <img class="product-item__primary-image" hidden data-media-id="{{ variant.featured_media.id | escape }}" loading="lazy" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: variant.featured_media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+                    {{ variant.featured_media | image_url: width: variant.featured_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__primary-image', data-media-id: variant.featured_media.id, hidden: true }}
       				      {% break %}
           		    {%- endunless -%}
       			    {%- endif -%}
@@ -62,7 +64,7 @@
 
       {%- if settings.show_secondary_image and product.media.size > 1 and hide_secondary_image != true -%}
         {%- assign next_media = product.media[product.featured_media.position] | default: product.media[1] -%}
-        <img class="product-item__secondary-image" loading="lazy" sizes="{{ sizes_attribute }}" {% render 'image-attributes', image: next_media, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200' %}>
+        {{- next_media | image_url: width: next_media.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,900,1000,1100,1200', class: 'product-item__secondary-image' -}}
       {%- endif -%}
     </a>
 
@@ -109,13 +111,13 @@
         {%- assign collection_for_vendor = collections[vendor_handle] -%}
 
         {%- unless collection_for_vendor.empty? -%}
-          <a class="product-item-meta__vendor heading heading--xsmall" href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+          <a class="product-item-meta__vendor heading heading--xsmall" href="{{ collection_for_vendor.url }}" data-instant>{{ product.vendor }}</a>
         {%- else -%}
-          <a class="product-item-meta__vendor heading heading--xsmall" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+          <a class="product-item-meta__vendor heading heading--xsmall" href="{{ product.vendor | url_for_vendor }}" data-instant>{{ product.vendor }}</a>
         {%- endunless -%}
       {%- endif -%}
 
-      <a href="{{ product.url }}" class="product-item-meta__title">{{ product.title }}</a>
+      <a href="{{ product.url }}" data-instant class="product-item-meta__title">{{ product.title }}</a>
 
       <div class="product-item-meta__price-list-container">
         <div class="price-list price-list--centered">
@@ -221,7 +223,7 @@
       </div>
 
       {%- if settings.show_product_rating and reduced_content != true -%}
-        <a class="product-item-meta__reviews-badge text--small" href="{{ product.url }}">
+        <a class="product-item-meta__reviews-badge text--small" href="{{ product.url }}" data-instant>
           {%- render 'product-rating', product: product -%}
         </a>
       {%- endif -%}

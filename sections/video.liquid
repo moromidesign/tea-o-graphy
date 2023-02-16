@@ -66,13 +66,15 @@
 
   {%- capture video_content -%}
     <div class="video-section video-section--{% if section.settings.background_type == 'boxed' %}boxed{% else %}full{% endif %} video-section--{{ section.settings.video_size }}">
-      <external-video {% if section.settings.autoplay %}autoplay{% endif %} provider="{{ section.settings.video_url.type | escape }}" class="video-wrapper {% if section.settings.autoplay %}video-wrapper--inert{% endif %} {% if section.settings.background_type == 'full_width' and section.settings.video_size != 'auto' %}video-wrapper--cover{% endif %}">
+      {%- capture video_poster -%}
         <div class="video-wrapper__poster">
-          {%- if section.settings.image != blank -%}
-            <img class="video-wrapper__poster-image" loading="lazy" sizes="(max-width: 740px) calc(100vw - 24px * 2), var(--container-max-width)" {% render 'image-attributes', image: section.settings.image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800' %}>
-          {%- else -%}
-            {{- 'lifestyle-1' | placeholder_svg_tag: 'video-wrapper__poster-image placeholder-background' -}}
-          {%- endif -%}
+          {%- unless section.settings.autoplay -%}
+            {%- if section.settings.image != blank -%}
+              {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) calc(100vw - 24px * 2), 1600px', widths: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800', class: 'video-wrapper__poster-image' -}}
+            {%- else -%}
+              {{- 'lifestyle-1' | placeholder_svg_tag: 'video-wrapper__poster-image placeholder-background' -}}
+            {%- endif -%}
+          {%- endunless -%}
 
           <div class="video-wrapper__poster-content {% if section.settings.background_type != 'boxed' %}content-box content-box--large content-box--text-center{% endif %}">
             {%- unless section.settings.autoplay -%}
@@ -86,15 +88,29 @@
             {%- endif -%}
           </div>
         </div>
+      {%- endcapture -%}
 
-        <template>
-          {%- if section.settings.video_url.type == 'youtube' -%}
-            <iframe title="{{ section.settings.title | escape }}" src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?playsinline=1&autoplay=1{% if section.settings.autoplay %}&controls=0&mute=1&loop=1{% endif %}&playlist={{ section.settings.video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
-            {%- elsif section.settings.video_url.type == 'vimeo' -%}
-            <iframe title="{{ section.settings.title | escape }}" src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}?autoplay=1&autopause=1{% if section.settings.autoplay %}&background=1&loop=1&muted=1{% endif %}&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
-          {%- endif -%}
-        </template>
-      </external-video>
+      {%- if section.settings.video != blank -%}
+        <native-video {% if section.settings.autoplay %}autoplay{% endif %} class="video-wrapper video-wrapper--native" style="--aspect-ratio: {{ section.settings.video.aspect_ratio }}">
+          {{- video_poster -}}
+
+          <template>
+            {{- section.settings.video | video_tag: controls: section.settings.show_video_controls, autoplay: section.settings.autoplay, muted: section.settings.autoplay, playsinline: section.settings.autoplay, loop: section.settings.autoplay -}}
+          </template>
+        </native-video>
+      {%- else -%}
+        <external-video {% if section.settings.autoplay %}autoplay{% endif %} provider="{{ section.settings.video_url.type | escape }}" class="video-wrapper {% if section.settings.autoplay %}video-wrapper--inert{% endif %} {% if section.settings.background_type == 'full_width' and section.settings.video_size != 'auto' %}video-wrapper--cover{% endif %}">
+          {{- video_poster -}}
+
+          <template>
+            {%- if section.settings.video_url.type == 'youtube' -%}
+              <iframe title="{{ section.settings.title | escape }}" src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?playsinline=1&autoplay=1{% if section.settings.autoplay %}&controls=0&mute=1&loop=1{% endif %}&playlist={{ section.settings.video_url.id }}&enablejsapi=1&rel=0&modestbranding=1&origin={{ 'https://' | append: request.host | url_encode }}" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+              {%- elsif section.settings.video_url.type == 'vimeo' -%}
+              <iframe title="{{ section.settings.title | escape }}" src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}?autoplay=1&autopause=1{% if section.settings.autoplay %}&background=1&loop=1&muted=1{% endif %}&transparent=0&responsive=1&portrait=0&title=0&byline=0&color={{ settings.text_color | remove_first: '#' }}" allow="autoplay; encrypted-media;" allowfullscreen="allowfullscreen"></iframe>
+            {%- endif -%}
+          </template>
+        </external-video>
+      {%- endif -%}
     </div>
   {%- endcapture -%}
 
@@ -116,6 +132,9 @@
 {
   "name": "Video",
   "class": "shopify-section--video",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
       "type": "text",
@@ -128,10 +147,16 @@
       "label": "Heading"
     },
     {
+      "type": "video",
+      "id": "video",
+      "label": "Video",
+      "info": "Replaces the external video if both are set."
+    },
+    {
       "type": "video_url",
       "id": "video_url",
       "accept": ["vimeo", "youtube"],
-      "label": "Video",
+      "label": "External video",
       "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
     },
     {
@@ -186,6 +211,13 @@
       "label": "Autoplay",
       "info": "Video is muted automatically to allow autoplay.",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_video_controls",
+      "label": "Show video controls",
+      "info": "Only applicable with native video.",
+      "default": false
     },
     {
       "type": "header",

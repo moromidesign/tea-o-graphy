@@ -68,19 +68,11 @@
             "title_3": "Secure Payments",
             "content_3": "<p><strong>We use Shopify and Shopify Payments<\/strong><\/p><p>We chose Shopify to manage your shopping information with us and build our store both because of their care for security and the ease at which we could create a beautiful and easy experience for you to find and learn all about us and our teas.<\/p><p>Shopify is certified Level 1 PCI DSS compliant. The Payment Card Industry Data Security Standard (PCI DSS) is a security standard for organizations that handle credit and debit card information. The standard was created to increase controls around payment data to reduce fraud. <\/p><p>Shopify runs annual assessments validating their security and compliance through the continuous risk management of their software and making sure their ecommerce is secure.<\/p><p>For information about Shopify's PCI Compliance reports, see <a href=\"https:\/\/help.shopify.com\/en\/manual\/your-account\/account-security\/compliance-docs\"><span style=\"text-decoration:underline\">Viewing Shopify’s compliance reports<\/span><\/a>.<\/p>"
           }
-        },
-        "35ff86d0-2ae2-4eee-89b8-ad9ddcd8964c": {
-          "type": "featured_products",
-          "settings": {
-            "title": "Featured products",
-            "products": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products.value }}"
-          }
         }
       },
       "block_order": [
         "description",
-        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7",
-        "35ff86d0-2ae2-4eee-89b8-ad9ddcd8964c"
+        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7"
       ],
       "settings": {}
     },
@@ -90,7 +82,6 @@
         "subheading": "",
         "title": "You may also like",
         "recommendations_count": 4,
-        "products": [],
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }

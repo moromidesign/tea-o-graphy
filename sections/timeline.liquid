@@ -83,7 +83,7 @@
                 <div id="block-{{ section.id }}-{{ block.id }}" class="timeline__item" {% unless forloop.first %}hidden{% endunless %} {{ block.shopify_attributes }}>
                   <div class="timeline__image-wrapper">
                     {%- if block.settings.image != blank -%}
-                      <img class="timeline__image" loading="lazy" sizes="(max-width: 740px) 81vw, 490px" {% render 'image-attributes', image: block.settings.image, sizes: '400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600' %}>
+                      {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 81vw, 490px', widths: '400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600', class: 'timeline__image' -}}
                     {%- else -%}
                       {{ 'image' | placeholder_svg_tag: 'timeline__image placeholder-background' }}
                     {%- endif -%}
@@ -138,6 +138,9 @@
 {
   "name": "Timeline",
   "class": "shopify-section--timeline",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "max_blocks": 5,
   "blocks": [
     {

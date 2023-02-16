@@ -5,7 +5,7 @@
         <div class="page-header__text-wrapper text-container">
           <h1 class="heading h2">{{ 'cart.general.title' | t }}</h1>
 
-          {%- if settings.cart_show_free_shipping_threshold and settings.cart_free_shipping_threshold != '' -%}
+          {%- if settings.cart_show_free_shipping_threshold and settings.cart_free_shipping_threshold != '' and cart.requires_shipping -%}
             {%- assign free_shipping_thresholds = settings.cart_free_shipping_threshold | remove: ' ' | split: ',' -%}
             {%- assign has_found_matching_threshold = false -%}
 
@@ -36,7 +36,7 @@
                 {%- endunless -%}
               {%- endfor -%}
 
-              <free-shipping-bar threshold="{{ threshold_in_cents }}" class="shipping-bar shipping-bar--large" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_in_cents | at_most: 1 }}">
+              <free-shipping-bar threshold="{{ threshold_in_cents }}" class="shipping-bar shipping-bar--large" style="--progress: {{ calculated_total_price | times: 1.0 | divided_by: threshold_in_cents | at_most: 1 }}">
                 {%- if calculated_total_price >= threshold_in_cents -%}
                   <span class="shipping-bar__text">{{ 'cart.general.free_shipping' | t }}</span>
                 {%- else -%}
@@ -63,9 +63,7 @@
 
     {%- if cart.item_count > 0 -%}
       <div class="page-content page-content--fluid">
-        <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
-          <input type="hidden" name="checkout">
-
+        <div class="cart">
           <div class="cart__content">
             <table class="line-item-table table table--loose">
               <thead class="line-item-table__header-group hidden-phone">
@@ -82,7 +80,7 @@
                     <td class="line-item__product">
                       <div class="line-item__content-wrapper">
                         <a href="{{ line_item.url }}" class="line-item__image-wrapper" tabindex="-1" aria-hidden="true">
-                          <img class="line-item__image" loading="sizes" sizes="(max-width: 740px) 80px, 92px" {% render 'image-attributes', image: line_item.image, sizes: '80,92,160,184,240,276' %}>
+                          {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 92px', widths: '80,92,160,184,240,276', class: 'line-item__image' -}}
                         </a>
 
                         {%- capture unit_price -%}
@@ -320,7 +318,9 @@
 
           <div class="cart__aside">
             <safe-sticky offset="24" class="cart__aside-inner">
-              <div class="cart__recap">
+              <form action="{{ routes.cart_url }}" method="post" novalidate class="cart__recap">
+                <input type="hidden" name="checkout">
+
                 {%- for block in section.blocks -%}
                   {%- case block.type -%}
                     {%- when 'totals' -%}
@@ -385,7 +385,7 @@
                   <span class="checkout-button__lock">{%- render 'icon' with 'lock' -%}</span>
                   {{- 'cart.general.checkout' | t -}}
                 </button>
-              </div>
+              </form>
 
               {%- if section.settings.show_payment_methods and shop.enabled_payment_types.size > 0 -%}
                 <div class="cart__payment-methods">
@@ -400,7 +400,7 @@
               {%- endif -%}
             </safe-sticky>
           </div>
-        </form>
+        </div>
       </div>
     {%- endif -%}
   </div>

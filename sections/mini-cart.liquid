@@ -36,7 +36,7 @@
     </div>
   {%- else -%}
     <div class="drawer__content">
-      {%- if settings.cart_show_free_shipping_threshold and settings.cart_free_shipping_threshold != '' -%}
+      {%- if settings.cart_show_free_shipping_threshold and settings.cart_free_shipping_threshold != '' and cart.requires_shipping -%}
         {%- assign free_shipping_thresholds = settings.cart_free_shipping_threshold | remove: ' ' | split: ',' -%}
         {%- assign has_found_matching_threshold = false -%}
 
@@ -57,17 +57,17 @@
         {%- endif -%}
 
         {%- if has_found_matching_threshold -%}
-          {%- assign threshold_in_cents = free_shipping_calculated_threshold | times: 100 -%}
+          {%- assign threshold_in_cents = free_shipping_calculated_threshold | times: 100.0 -%}
 
-          {%- assign calculated_total_price = cart.total_price -%}
+          {%- assign calculated_total_price = 0 -%}
 
           {%- for line_item in cart.items -%}
-            {%- unless line_item.requires_shipping -%}
-              {%- assign calculated_total_price = calculated_total_price | minus: line_item.final_line_price -%}
-            {%- endunless -%}
+            {%- if line_item.requires_shipping -%}
+              {%- assign calculated_total_price = calculated_total_price | plus: line_item.final_line_price -%}
+            {%- endif -%}
           {%- endfor -%}
 
-          <free-shipping-bar threshold="{{ threshold_in_cents }}" class="shipping-bar" style="--progress: {{ cart.total_price | times: 1.0 | divided_by: threshold_in_cents | at_most: 1 }}">
+          <free-shipping-bar threshold="{{ threshold_in_cents }}" class="shipping-bar" style="--progress: {{ calculated_total_price | times: 1.0 | divided_by: threshold_in_cents | at_most: 1 }}">
             {%- if calculated_total_price >= threshold_in_cents -%}
               <span class="shipping-bar__text text--small">{{ 'cart.general.free_shipping' | t }}</span>
             {%- else -%}
@@ -92,7 +92,7 @@
                   <span class="line-item__loader-mark" hidden>{% render 'icon' with 'check', width: 20, height: 20 %}</span>
                 </span>
 
-                <img class="line-item__image" loading="sizes" sizes="(max-width: 740px) 80px, 92px" {% render 'image-attributes', image: line_item.image, sizes: '80,92,160,184,240,276' %}>
+                {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 92px', widths: '80,92,160,184,240,276', class: 'line-item__image' -}}
               </a>
 
               {%- capture unit_price -%}

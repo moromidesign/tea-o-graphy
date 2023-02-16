@@ -45,9 +45,13 @@
             {%- for block in section.blocks -%}
               <button class="press-list__logo-item tap-area" {% if forloop.first %}aria-current="true"{% endif %}>
                 {%- if block.settings.logo != blank -%}
-                  {%- capture image_sizes -%}{{ block.settings.logo_width }}, {{ block.settings.logo_width | times: 2 }}, {{ block.settings.logo_width | times: 3 }}{%- endcapture -%}
                   <span class="visually-hidden">{{ 'general.accessibility.go_to_slide' | t: num: forloop.index }}</span>
-                  <img class="press-list__logo-image" loading="lazy" style="max-width: {{ block.settings.logo_width }}px" sizes="{{ block.settings.logo_width }}px" {% render 'image-attributes', image: block.settings.logo, sizes: image_sizes %}>
+
+                  {%- capture image_widths -%}{{ block.settings.logo_width }}, {{ block.settings.logo_width | times: 2 }}, {{ block.settings.logo_width | times: 3 }}{%- endcapture -%}
+                  {%- capture sizes_attribute -%}{{ block.settings.logo_width }}px{%- endcapture -%}
+                  {%- capture style_attribute -%}max-width: {{ block.settings.logo_width }}px{%- endcapture -%}
+
+                  {{- block.settings.logo | image_url: width: block.settings.logo.width | image_tag: loading: 'lazy', style: style_attribute, sizes: sizes_attribute, widths: image_widths, class: 'press-list__logo-image' -}}
                 {%- else -%}
                   <span class="heading h6">Logo {{ forloop.index }}</span>
                 {%- endif -%}
@@ -64,6 +68,9 @@
 {
   "name": "Press",
   "class": "shopify-section--press",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "max_blocks": 6,
   "blocks": [
     {

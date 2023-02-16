@@ -56,7 +56,11 @@
     <image-with-text-overlay {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="image-overlay image-overlay--{{ section.settings.section_height }}" {% if section.settings.section_height == 'auto' %}style="--image-aspect-ratio: {{ image_aspect_ratio }}"{% endif %}>
       <div class="image-overlay__image-wrapper" {% if section.settings.section_height == 'auto' %}style="padding-bottom: {{ 100.0 | divided_by: image_aspect_ratio }}%"{% endif %}>
         {%- if image != blank -%}
-          <img class="image-overlay__image" loading="lazy" {% if section.settings.reveal_on_scroll %}reveal{% endif %} {% render 'image-attributes', image: image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+          {%- if section.settings.reveal_on_scroll -%}
+            {{- image | image_url: width: image.width | image_tag: loading: 'lazy', widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', reveal: true, class: 'image-overlay__image' -}}
+          {%- else -%}
+            {{- image | image_url: width: image.width | image_tag: loading: 'lazy', widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'image-overlay__image' -}}
+          {%- endif -%}
         {%- else -%}
           {%- capture image_classes -%}image-overlay__image image-overlay__image--placeholder image-overlay__image--{{ section.settings.section_height }}{%- endcapture -%}
 
@@ -117,6 +121,9 @@
 {
   "name": "Image with text overlay",
   "class": "shopify-section--image-with-text-overlay",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
       "type": "checkbox",

@@ -150,9 +150,18 @@
 
                   {%- if section.settings.layout == 'grid' and collection_image.aspect_ratio > 2.5 -%}
                     {%- assign height_constraint = 800 | at_most: collection_image.height -%}
-                    <img class="list-collections__item-image" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="{{ image_sizes }}" {% render 'image-attributes', image: collection_image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', height_constraint: height_constraint, crop: 'center' %}>
+
+                    {%- if section.settings.reveal_on_scroll -%}
+                      {{- collection_image | image_url: width: collection_image.width, height: height_constraint, crop: 'center' | image_tag: loading: 'lazy', sizes: image_sizes, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', reveal: true, class: 'list-collections__item-image' -}}
+                    {%- else -%}
+                      {{- collection_image | image_url: width: collection_image.width, height: height_constraint, crop: 'center' | image_tag: loading: 'lazy', sizes: image_sizes, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', class: 'list-collections__item-image' -}}
+                    {%- endif -%}
                   {%- else -%}
-                    <img class="list-collections__item-image" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="{{ image_sizes }}" {% render 'image-attributes', image: collection_image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800' %}>
+                    {%- if section.settings.reveal_on_scroll -%}
+                      {{- collection_image | image_url: width: collection_image.width | image_tag: loading: 'lazy', sizes: image_sizes, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', reveal: true, class: 'list-collections__item-image' -}}
+                    {%- else -%}
+                      {{- collection_image | image_url: width: collection_image.width | image_tag: loading: 'lazy', sizes: image_sizes, widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', class: 'list-collections__item-image' -}}
+                    {%- endif -%}
                   {%- endif -%}
                 {%- else -%}
                   {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}
@@ -208,6 +217,10 @@
 {
   "name": "Collection list",
   "class": "shopify-section--collection-list",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
   "blocks": [
     {
       "name": "Collection",

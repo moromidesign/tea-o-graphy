@@ -19,7 +19,7 @@
         <div class="product-sticky-form__content-wrapper hidden-pocket">
           <div class="product-sticky-form__image-wrapper">
             {%- assign featured_media = product.selected_or_first_available_variant.featured_image | default: product.featured_media -%}
-            <img class="product-sticky-form__image" loading="lazy" sizes="55px" {% render 'image-attributes', image: featured_media, sizes: '55,110,165' %}>
+            {{- featured_media | image_url: width: featured_media.width | image_tag: loading: 'lazy', sizes: '55px', widths: '55,110,165', class: 'product-sticky-form__image' -}}
           </div>
 
           <div class="product-sticky-form__info">

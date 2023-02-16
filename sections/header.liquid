@@ -22,13 +22,19 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
     {%- if section.settings.enable_sticky_header -%}
       position: -webkit-sticky;
       position: sticky;
+      top: 0;
     {%- else -%}
       position: relative;
     {%- endif -%}
 
-    top: {% if section.settings.enable_sticky_header %}calc(var(--enable-sticky-announcement-bar) * var(--announcement-bar-height, 0px)){% else %}0{% endif %};
     z-index: 4;
   }
+
+  {%- if section.settings.enable_sticky_header -%}
+    .shopify-section--announcement-bar ~ #shopify-section-{{ section.id }} {
+      top: calc(var(--enable-sticky-announcement-bar, 0) * var(--announcement-bar-height, 0px));
+    }
+  {%- endif -%}
 
   {%- if request.page_type == 'index' and section.settings.enable_transparent_header -%}
     #shopify-section-{{ section.id }} {
@@ -138,8 +144,6 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
           <div class="header__search-bar predictive-search hidden-pocket">
             <form class="predictive-search__form" action="{{ routes.search_url }}" method="get" role="search">
               <input type="hidden" name="type" value="product">
-              <input type="hidden" name="options[prefix]" value="last">
-              <input type="hidden" name="options[unavailable_products]" value="{{ settings.search_unavailable_products }}">
 
               {%- render 'icon' with 'header-search' -%}
               <input class="predictive-search__input" is="predictive-search-input" type="text" name="q" autocomplete="off" autocorrect="off" aria-controls="search-drawer" aria-expanded="false" aria-label="{{ 'search.general.title' | t }}" placeholder="{{ 'search.general.search_placeholder' | t }}">

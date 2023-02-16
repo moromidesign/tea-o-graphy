@@ -40,8 +40,13 @@
       <div class="image-overlay__image-wrapper" {% if section.settings.section_height == 'auto' %}style="padding-bottom: {{ 100.0 | divided_by: collection.image.aspect_ratio }}%"{% endif %}>
         {%- comment -%}Performance note: this image must not be lazyloaded as it contributes to the LCP{%- endcomment -%}
         <picture>
-          <source media="(max-width: 740px)" {% render 'image-attributes', image: collection.image, sizes: '400,500,600,700,800,900,1000', height_constraint: 600, crop: 'center', ignore_src: true %}>
-          <img class="image-overlay__image" reveal {% render 'image-attributes', image: collection.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600' %}>
+          {%- if section.settings.section_height != 'auto' -%}
+            {{- collection.image | image_url: width: collection.image.width, height: 600, crop: 'center' | image_tag: widths: '400,500,600,700,800,900,1000', media: '(max-width: 740px)' | replace: '<img', '<source' -}}
+          {%- else -%}
+            {{- collection.image | image_url: width: collection.image.width | image_tag: widths: '400,500,600,700,800,900,1000', media: '(max-width: 740px)' | replace: '<img', '<source' -}}
+          {%- endif -%}
+
+          {{- collection.image | image_url: width: collection.image.width | image_tag: widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600', class: 'image-overlay__image', reveal: true -}}
         </picture>
       </div>
 

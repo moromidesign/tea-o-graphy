@@ -108,7 +108,7 @@
 
             {%- capture trust_icon -%}
               {%- if custom_icon != blank -%}
-                <img class="product-tabs__trust-icon" loading="lazy" sizes="24px" {% render 'image-attributes', image: custom_icon, sizes: '24,48,72,96' %}>
+                {{- custom_image | image_url: width: custom_icon.width | image_tag: loading: 'lazy', sizes: '24px', widths: '24,48,72,96', class: 'product-tabs__trust-icon' -}}
               {%- else -%}
                 {%- render 'icon' with trust_block.settings[icon_setting], class: 'product-tabs__trust-icon' -%}
               {%- endif -%}
@@ -143,7 +143,7 @@
 
             {%- capture trust_icon -%}
               {%- if custom_icon != blank -%}
-                <img class="product-tabs__trust-icon" loading="lazy" sizes="24px" {% render 'image-attributes', image: custom_icon, sizes: '24,48,72,96' %}>
+                {{- custom_image | image_url: width: custom_icon.width | image_tag: loading: 'lazy', sizes: '24px', widths: '24,48,72,96', class: 'product-tabs__trust-icon' -}}
               {%- else -%}
                 {%- render 'icon' with trust_block.settings[icon_setting], class: 'product-tabs__trust-icon' -%}
               {%- endif -%}
@@ -344,9 +344,8 @@
 
               {%- assign processed_blocks = processed_blocks | plus: 1 -%}
             {%- endif -%}
-          {%- endcase -%}                     
+          {%- endcase -%}
         {%- endfor -%}
-      
       </div>
     {%- endif -%}
 
@@ -356,10 +355,6 @@
       </div>
     {%- endif -%}
 
-
-
-
-    
     {%- comment -%}Output the various drawers for the trust badges, only once (if they exist){%- endcomment -%}
     {{- trust_drawer_content -}}
   {%- endcapture -%}
@@ -563,40 +558,19 @@
       ]
     },
     {
-      "name": "Featured products",
-      "type": "featured_products",
+      "name": "Complementary products",
+      "type": "complementary_products",
       "limit": 1,
       "settings": [
+        {
+          "type": "paragraph",
+          "content": "To select complementary products, use the Search & Discovery app. Only the first two products are visible. [Learn more](https://help.shopify.com/en/manual/online-store/search-and-discovery/product-recommendations#complementary-products)"
+        },
         {
           "type": "text",
           "id": "title",
           "label": "Heading",
           "default": "Featured products"
-        },
-        {
-          "type": "product_list",
-          "id": "products",
-          "label": "Products",
-          "limit": 2
-        }
-      ]
-    },
-    {
-      "name": "Featured data",
-      "type": "featured_data",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Heading",
-          "default": "Featured details"
-        },
-        {
-          "type": "liquid",
-          "id": "details",
-          "label": "Details",
-          "default": "<p>Add details and metafields about your product</p>"
         }
       ]
     },

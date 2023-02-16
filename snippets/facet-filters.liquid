@@ -39,7 +39,7 @@ Code that create the faceted search for the collection and search pages. It curr
       {%- if request.page_type == 'collection' -%}
         <a class="drawer__header-action link text--subdued" data-action="clear-filters" href="{{ page_url }}?sort_by={{ sort_by }}">{{ 'collection.general.clear_filters' | t }}</a>
       {%- else -%}
-        <a class="drawer__header-action link text--subdued" data-action="clear-filters" href="{{ page_url }}?sort_by={{ sort_by }}&q={{ search.terms | escape }}&type=product&options[prefix]=last&options[unavailable_products]={{ settings.search_unavailable_products }}">{{ 'collection.general.clear_filters' | t }}</a>
+        <a class="drawer__header-action link text--subdued" data-action="clear-filters" href="{{ page_url }}?sort_by={{ sort_by }}&q={{ search.terms | escape }}">{{ 'collection.general.clear_filters' | t }}</a>
       {%- endif -%}
     {%- endif -%}
 
@@ -54,9 +54,6 @@ Code that create the faceted search for the collection and search pages. It curr
 
       {%- if request.page_type == 'search' -%}
         <input type="hidden" name="q" value="{{ search.terms | escape }}">
-        <input type="hidden" name="type" value="product">
-        <input type="hidden" name="options[prefix]" value="last">
-        <input type="hidden" name="options[unavailable_products]" value="{{ settings.search_unavailable_products }}">
       {% elsif request.page_type == 'collection' and collection.current_type != blank or collection.current_vendor != blank %}
         <input type="hidden" name="q" value="{{ collection.current_vendor | default: collection.current_type | escape }}">
       {%- endif -%}

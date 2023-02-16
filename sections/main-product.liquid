@@ -90,9 +90,9 @@
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
       {%- if template.suffix == 'quick-buy-drawer' -%}
-        <img loading="lazy" sizes="114px" class="quick-buy-product__image" {% render 'image-attributes', image: featured_media, sizes: '114,228,342' %}>
+        {{- featured_media | image_url: width: featured_media.width | image_tag: loading: 'lazy', sizes: '114px', widths: '114,228,342', class: 'quick-buy-product__image' -}}
       {%- else -%}
-        <img loading="lazy" sizes="65px" class="quick-buy-product__image" {% render 'image-attributes', image: featured_media, sizes: '65,130,195' %}>
+        {{- featured_media | image_url: width: featured_media.width | image_tag: loading: 'lazy', sizes: '65px', widths: '65,130,195', class: 'quick-buy-product__image' -}}
       {%- endif -%}
 
       <div class="quick-buy-product__info {% if template.suffix == 'quick-buy-popover' %}text--small{% endif %}">

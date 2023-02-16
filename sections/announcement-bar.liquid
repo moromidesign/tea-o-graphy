@@ -9,16 +9,15 @@
     --primary-button-background: {{ section.settings.button_background.red }}, {{ section.settings.button_background.green }}, {{ section.settings.button_background.blue }};
     --primary-button-text-color: {{ section.settings.button_text_color.red }}, {{ section.settings.button_text_color.green }}, {{ section.settings.button_text_color.blue }};
     --section-background: {{ section.settings.background.red }}, {{ section.settings.background.green }}, {{ section.settings.background.blue }};
-    z-index: 5; /* Make sure it goes over header */
 
     {%- if section.settings.announcement_bar_position == 'sticky' or section.settings.announcement_bar_position == 'sticky_mobile' -%}
       position: -webkit-sticky;
       position: sticky;
+      top: 0;
+      z-index: 5; /* Make sure it goes over header */
     {%- else -%}
       position: relative;
     {%- endif -%}
-
-    top: 0;
   }
 
   @media screen and (min-width: 741px) {
@@ -30,8 +29,11 @@
       {%- if section.settings.announcement_bar_position == 'sticky' or section.settings.announcement_bar_position == 'sticky_desktop' -%}
         position: -webkit-sticky;
         position: sticky;
+        top: 0;
+        z-index: 5; /* Make sure it goes over header */
       {%- else -%}
         position: relative;
+        z-index: unset;
       {%- endif -%}
     }
   }
@@ -89,7 +91,8 @@
                     </button>
 
                     {%- if block.settings.image != blank -%}
-                      <img class="announcement-bar__content-image" loading="lazy" sizes="{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}" {% render 'image-attributes', image: block.settings.image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+                      {%- capture sizes_attribute -%}{% if block.settings.content != blank %}50vw{% else %}100vw{% endif %}{%- endcapture -%}
+                      {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'announcement-bar__content-image' -}}
                     {%- endif -%}
 
                     {%- if block.settings.content != blank -%}

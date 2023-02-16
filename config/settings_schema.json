@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Focal",
     "theme_author": "Maestrooo",
-    "theme_version": "8.11.5",
+    "theme_version": "10.0.0",
     "theme_documentation_url": "https:\/\/support.maestrooo.com\/",
     "theme_support_url": "https:\/\/support.maestrooo.com\/article\/203-contact-us"
   },
@@ -486,60 +486,6 @@
     ]
   },
   {
-    "name": "Search",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Search for"
-      },
-      {
-        "type": "checkbox",
-        "id": "search_enable_products",
-        "label": "Products",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "search_enable_blog_posts",
-        "label": "Blog posts",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "search_enable_pages",
-        "label": "Pages",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "search_enable_collections",
-        "label": "Collections",
-        "info": "Collection results currently only show on predictive search.",
-        "default": true
-      },
-      {
-        "type": "select",
-        "id": "search_unavailable_products",
-        "label": "Sold out products should...",
-        "options": [
-          {
-            "value": "show",
-            "label": "Always show"
-          },
-          {
-            "value": "hide",
-            "label": "Be hidden"
-          },
-          {
-            "value": "last",
-            "label": "Show last"
-          }
-        ],
-        "default": "last"
-      }
-    ]
-  },
-  {
     "name": "Cart",
     "settings": [
       {
@@ -581,12 +527,6 @@
           }
         ],
         "default": "shopping_bag"
-      },
-      {
-        "type": "url",
-        "id": "cart_empty_button_link",
-        "label": "Empty button link",
-        "default": "\/collections\/all"
       },
       {
         "type": "checkbox",

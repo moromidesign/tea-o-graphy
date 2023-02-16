@@ -1,0 +1,18 @@
+{
+  "type": "custom.overlay",
+  "name": "Overlay group",
+  "sections": {
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "settings": {}
+    },
+    "privacy-banner": {
+      "type": "privacy-banner",
+      "settings": {}
+    }
+  },
+  "order": [
+    "newsletter-popup",
+    "privacy-banner"
+  ]
+}

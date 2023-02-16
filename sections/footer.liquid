@@ -17,13 +17,10 @@
           {%- capture block_content -%}
             {%- case block.type -%}
               {%- when 'image' -%}
-{%- comment -%}  =============== added target="_blank" to links =============== {%- endcomment -%} 
-                {%- if block.settings.link != blank -%}
-                  <a href="{{ block.settings.link }}">
-                    <img style="width: {{ block.settings.image_width }}px" loading="lazy" sizes="{{ block.settings.image_width }}px" class="footer__image" {% render 'image-attributes', image: block.settings.image, sizes: '100, 200, 300, 400, 500, 600' %}>
-                  </a>
-                {%- else block.settings.image != blank -%}
-                  <img style="width: {{ block.settings.image_width }}px" loading="lazy" sizes="{{ block.settings.image_width }}px" class="footer__image" {% render 'image-attributes', image: block.settings.image, sizes: '100, 200, 300, 400, 500, 600' %}>
+                {%- if block.settings.image != blank -%}
+                  {%- capture sizes_attribute -%}{{ block.settings.image_width }}px{%- endcapture -%}
+                  {%- capture style_attribute -%}width: {{ block.settings.image_width }}px{%- endcapture -%}
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style_attribute, sizes: sizes_attribute, widths: '100,200,300,400,500,600', class: 'footer__image' -}}
                 {%- endif -%}
 
               {%- when 'text' -%}
@@ -105,10 +102,7 @@
           {%- endcapture -%}
 
           {%- if block_content != blank -%}
-            <div
-              class="footer__item footer__item--{{ block.type | replace: '_', '-' }} {% if forloop.first %}is-first{% endif %}"
-              {{ block.shopify_attributes }}
-            >
+            <div class="footer__item footer__item--{{ block.type | replace: '_', '-' }} {% if forloop.first %}is-first{% endif %}" {{ block.shopify_attributes }}>
               {{- block_content -}}
             </div>
           {%- endif -%}
@@ -131,34 +125,18 @@
                 <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
                 <span class="visually-hidden">{{ 'footer.general.country' | t }}</span>
 
-                <button
-                  type="button"
-                  is="toggle-button"
-                  class="select select--small {% if locale_selector and settings.button_border_radius > 0 %}select--collapse-end{% endif %} text--xsmall"
-                  aria-expanded="false"
-                  aria-controls="footer-currency-selector"
-                >
-                  {{- localization.country.name }} ({{ localization.country.currency.iso_code }}
-                  {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}{%- endif -%}
-                  )
+                <button type="button" is="toggle-button" class="select select--small {% if locale_selector and settings.button_border_radius > 0 %}select--collapse-end{% endif %} text--xsmall" aria-expanded="false" aria-controls="footer-currency-selector">
+                  {{- localization.country.name }} ({{ localization.country.currency.iso_code }} {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}{%- endif -%})
                   {%- render 'icon' with 'chevron', width: 9, height: 6, inline: true -%}
                 </button>
 
-                <popover-content
-                  id="footer-currency-selector"
-                  class="popover popover--top popover--left popover--small"
-                >
+                <popover-content id="footer-currency-selector" class="popover popover--top popover--left popover--small">
                   <span class="popover__overlay"></span>
 
                   <header class="popover__header">
                     <span class="popover__title heading h6">{{- 'footer.general.country' | t -}}</span>
 
-                    <button
-                      type="button"
-                      class="popover__close-button tap-area tap-area--large"
-                      data-action="close"
-                      title="{{ 'general.accessibility.close' | t | escape }}"
-                    >
+                    <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
                       {%- render 'icon' with 'close' -%}
                     </button>
                   </header>
@@ -166,21 +144,9 @@
                   <div class="popover__content popover__content--restrict">
                     <div class="popover__choice-list">
                       {%- for country in localization.available_countries -%}
-                        <button
-                          type="submit"
-                          name="country_code"
-                          value="{{ country.iso_code }}"
-                          class="popover__choice-item"
-                        >
-                          <span
-                            class="popover__choice-label"
-                            {% if country.iso_code == localization.country.iso_code %}
-                              aria-current="true"
-                            {% endif %}
-                          >
-                            {{- country.name }} ({{ country.currency.iso_code }}
-                            {% if country.currency.symbol %}{{ country.currency.symbol }}{%- endif -%}
-                            )
+                        <button type="submit" name="country_code" value="{{ country.iso_code }}" class="popover__choice-item">
+                          <span class="popover__choice-label" {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
+                            {{- country.name }} ({{ country.currency.iso_code }} {% if country.currency.symbol %}{{ country.currency.symbol }}{%- endif -%})
                           </span>
                         </button>
                       {%- endfor -%}
@@ -195,13 +161,7 @@
                 <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
                 <span class="visually-hidden">{{ 'footer.general.language' | t }}</span>
 
-                <button
-                  type="button"
-                  is="toggle-button"
-                  class="select select--small {% if country_selector and settings.button_border_radius > 0 %}select--collapse-start{% endif %} text--xsmall"
-                  aria-expanded="false"
-                  aria-controls="footer-locale-selector"
-                >
+                <button type="button" is="toggle-button" class="select select--small {% if country_selector and settings.button_border_radius > 0 %}select--collapse-start{% endif %} text--xsmall" aria-expanded="false" aria-controls="footer-locale-selector">
                   {{- localization.language.endonym_name | capitalize -}}
                   {%- render 'icon' with 'chevron', width: 9, height: 6, inline: true -%}
                 </button>
@@ -212,12 +172,7 @@
                   <header class="popover__header">
                     <span class="popover__title heading h6">{{- 'footer.general.language' | t -}}</span>
 
-                    <button
-                      type="button"
-                      class="popover__close-button tap-area tap-area--large"
-                      data-action="close"
-                      title="{{ 'general.accessibility.close' | t | escape }}"
-                    >
+                    <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="{{ 'general.accessibility.close' | t | escape }}">
                       {%- render 'icon' with 'close' -%}
                     </button>
                   </header>
@@ -225,18 +180,8 @@
                   <div class="popover__content">
                     <div class="popover__choice-list">
                       {%- for language in localization.available_languages -%}
-                        <button
-                          type="submit"
-                          name="locale_code"
-                          value="{{ language.iso_code }}"
-                          class="popover__choice-item"
-                        >
-                          <span
-                            class="popover__choice-label"
-                            {% if language.iso_code == localization.language.iso_code %}
-                              aria-current="true"
-                            {% endif %}
-                          >
+                        <button type="submit" name="locale_code" value="{{ language.iso_code }}" class="popover__choice-item">
+                          <span class="popover__choice-label" {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
                             {{- language.endonym_name | capitalize -}}
                           </span>
                         </button>
@@ -249,24 +194,11 @@
           {%- endform -%}
         {%- endif -%}
 
-        {%- comment -%}
-          ===============
-          copyright and footer text edited Dec 7 22
-          Original code below:
-          ===============
-          <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
-        {%- endcomment -%}
-
-        <span class="footer__copyright text--xsmall text--subdued"
-          >©{{ shop.name }} 2022<span class="square-separator square-separator--block square-separator--subdued"></span>
-          {{ powered_by_link | replace: '<a', '<a class="link--faded"' -}}
-        </span>
+        <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
 
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
           <div class="footer__payment-methods">
-            <span class="footer__payment-methods-label text--xsmall text--subdued">
-              {{- 'footer.general.we_accept' | t -}}
-            </span>
+            <span class="footer__payment-methods-label text--xsmall text--subdued">{{ 'footer.general.we_accept' | t }}</span>
 
             <div class="payment-methods-list payment-methods-list--auto">
               {% for type in shop.enabled_payment_types %}
@@ -279,27 +211,6 @@
     </div>
   </div>
 </footer>
-
-{%- if section.settings.show_cookie_bar -%}
-  <cookie-bar section="{{ section.id }}" hidden class="cookie-bar text--xsmall">
-    {%- if section.settings.cookie_bar_title != blank -%}
-      <p class="heading heading--xsmall">{{ section.settings.cookie_bar_title }}</p>
-    {%- endif -%}
-
-    {%- if section.settings.cookie_bar_content != blank -%}
-      {{- section.settings.cookie_bar_content -}}
-    {%- endif -%}
-
-    <div class="cookie-bar__actions">
-      <button class="button button--text button--primary button--small text--xsmall" data-action="accept-policy">
-        {{ 'footer.cookie_bar.accept' | t }}
-      </button>
-      <button class="button button--text button--ternary button--small text--xsmall" data-action="decline-policy">
-        {{ 'footer.cookie_bar.decline' | t }}
-      </button>
-    </div>
-  </cookie-bar>
-{%- endif -%}
 
 {% schema %}
 {
@@ -334,29 +245,6 @@
       "id": "show_locale_selector",
       "label": "Show language selector",
       "default": true
-    },
-    {
-      "type": "header",
-      "content": "Customer privacy bar"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_cookie_bar",
-      "label": "Show privacy bar",
-      "info": "Privacy bar will only be visible if it fulfills the conditions of the [Shopify Customer Privacy API](https://shopify.dev/docs/themes/consent-tracking-api)",
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "cookie_bar_title",
-      "label": "Title",
-      "default": "Cookie policy"
-    },
-    {
-      "type": "richtext",
-      "id": "cookie_bar_content",
-      "label": "Content",
-      "default": "<p>I agree to the processing of my data in accordance with the conditions set out in the policy of Privacy.</p>"
     }
   ],
   "blocks": [
@@ -369,11 +257,6 @@
           "id": "image",
           "label": "Image",
           "info": "300 x 300px .png recommended"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
         },
         {
           "type": "range",

@@ -65,8 +65,11 @@
             {%- capture logo_content -%}
               {%- if block.settings.logo != blank -%}
                 {%- assign logo_max_size = block.settings.logo.width | divided_by: 2 | at_most: 200 -%}
-                {%- capture logo_sizes -%}{{ logo_max_size }},{{ logo_max_size | times: 2 }}{%- endcapture -%}
-                <img loading="lazy" sizes="{{ logo_max_size }}px" style="width: {{ logo_max_size }}px" class="logo-list__image" {% render 'image-attributes', image: block.settings.logo, sizes: logo_sizes %}>
+                {%- capture logo_widths -%}{{ logo_max_size }},{{ logo_max_size | times: 2 }}{%- endcapture -%}
+                {%- capture logo_sizes -%}{{ logo_max_size }}px{%- endcapture -%}
+                {%- capture logo_style -%}width: {{ logo_max_size }}px{%- endcapture -%}
+
+                {{ block.settings.logo | image_url: width: block.settings.logo.width | image_tag: loading: 'lazy', style: logo_style, sizes: logo_sizes, widths: logo_widths, class: 'logo-list__image' }}
               {%- else -%}
                 {{- 'image' | placeholder_svg_tag: 'logo-list__image logo-list__image--placeholder' -}}
               {%- endif -%}
@@ -102,23 +105,13 @@ added target="_blank" to links
       {%- endcapture -%}
 
       {%- if section.settings.stack_logos -%}
-        <logo-list
-          {% if section.settings.reveal_on_scroll %}
-            reveal-on-scroll
-          {% endif %}
-          class="logo-list logo-list--grid"
-        >
+        <logo-list {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="logo-list logo-list--grid">
           {{- section_content -}}
         </logo-list>
       {%- else -%}
         <div class="scroller">
           <div class="scroller__inner">
-            <logo-list
-              {% if section.settings.reveal_on_scroll %}
-                reveal-on-scroll
-              {% endif %}
-              class="logo-list logo-list--carousel"
-            >
+            <logo-list {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="logo-list logo-list--carousel">
               {%- if section.blocks.size > 6 -%}
                 <prev-next-buttons class="logo-list__prev-next hidden-pocket">
                   <button class="logo-list__arrow prev-next-button prev-next-button--prev" disabled>
@@ -141,9 +134,7 @@ added target="_blank" to links
 
       {%- if section.settings.button_text != blank -%}
         <div class="section__footer">
-          <a class="button button--primary" href="{{ section.settings.button_link }}">
-            {{- section.settings.button_text -}}
-          </a>
+          <a class="button button--primary" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
         </div>
       {%- endif -%}
     </div>
@@ -154,6 +145,9 @@ added target="_blank" to links
 {
   "name": "Logo list",
   "class": "shopify-section--logo-list",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
       "type": "checkbox",

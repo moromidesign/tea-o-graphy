@@ -72,14 +72,27 @@
             {%- case media.media_type -%}
               {%- when 'image' -%}
                 <div class="product__media-image-wrapper aspect-ratio aspect-ratio--natural" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }}">
-                  <img {% if selected_media.id == media.id and settings.reveal_product_media %}reveal{% endif %} {% if selected_media.id != media.id or request.page_type != 'product' %}loading="lazy"{% endif %} sizes="(max-width: 999px) calc(100vw - 48px), 640px" {% render 'image-attributes', image: media, alt: alt, sizes: '400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800' %}>
+                  {%- assign should_reveal = false -%}
+                  {%- assign loading = 'eager' -%}
+
+                  {%- if settings.reveal_product_media and selected_media.id == media.id -%}
+                    {%- assign should_reveal = true -%}
+                  {%- else -%}
+                    {%- assign loading = 'lazy' -%}
+                  {%- endif -%}
+
+                  {%- if should_reveal -%}
+                    {{- media | image_url: width: media.width | image_tag: loading: loading, sizes: '(max-width: 999px) calc(100vw - 48px), 640px', widths: '400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800', reveal: true -}}
+                  {%- else -%}
+                    {{- media | image_url: width: media.width | image_tag: loading: loading, sizes: '(max-width: 999px) calc(100vw - 48px), 640px', widths: '400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800' -}}
+                  {%- endif -%}
                 </div>
 
               {%- when 'video' -%}
                 <native-video class="video-wrapper video-wrapper--native" style="--aspect-ratio: {{ media.aspect_ratio }}">
                   {%- unless section.settings.enable_video_autoplay -%}
                     <div class="video-wrapper__poster">
-                      <img class="video-wrapper__poster-image" {% if selected_media.id != media.id or request.page_type != 'product' %}loading="lazy"{% endif %} sizes="(max-width: 999px) calc(100vw - 48px), 640px" {% render 'image-attributes', image: media.preview_image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200' %}>
+                      {{ media.preview_image | image_url: width: media.preview_image.width | image_tag: loading: 'lazy', sizes: '(max-width: 999px) calc(100vw - 48px), 640px', widths: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200', class: 'video-wrapper__poster-image' }}
 
                       <div class="video-wrapper__poster-content">
                         <button type="button" class="video-wrapper__play-button" title="{{ 'general.accessibility.play_video' | t | escape }}">
@@ -98,7 +111,7 @@
                 <external-video provider="{{ media.host | escape }}" class="video-wrapper">
                   {%- unless section.settings.enable_video_autoplay -%}
                     <div class="video-wrapper__poster">
-                      <img class="video-wrapper__poster-image" {% if selected_media.id != media.id or request.page_type != 'product' %}loading="lazy"{% endif %} sizes="(max-width: 999px) calc(100vw - 48px), 640px" {% render 'image-attributes', image: media.preview_image, sizes: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200' %}>
+                      {{ media.preview_image | image_url: width: media.preview_image.width | image_tag: loading: 'lazy', sizes: '(max-width: 999px) calc(100vw - 48px), 640px', widths: '400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200', class: 'video-wrapper__poster-image' }}
 
                       <div class="video-wrapper__poster-content">
                         <button type="button" class="video-wrapper__play-button" title="{{ 'general.accessibility.play_video' | t | escape }}">
@@ -186,7 +199,7 @@
 
                 <button type="button" tabindex="-1" {% if settings.reveal_product_media and is_media_filtered == false %}reveal{% endif %} class="product__thumbnail-item {% if is_media_filtered %}is-filtered{% endif %} {% unless section.settings.show_thumbnails_on_mobile %}hidden-pocket{% endunless %}" {% if selected_media.id == media.id %}aria-current="true"{% endif %} aria-controls="product-{{ section.id }}-{{ media.id }}" data-media-id="{{ media.id }}" data-action="select">
                   <div class="product__thumbnail">
-                    <img loading="lazy" sizes="(max-width: 999px) 72px, 60px" {% render 'image-attributes', image: media.preview_image, alt: alt, sizes: '60,72,120,144,180,216,240,288' %}>
+                    {{ media.preview_image | image_url: width: media.preview_image.width | image_tag: loading: 'lazy', sizes: '(max-width: 999px) 72px, 60px', widths: '60,72,120,144,180,216,240,288' }}
 
                     {%- case media.media_type -%}
                       {%- when 'model' -%}

@@ -1,5 +1,3 @@
-{%- capture search_mode -%}{% if settings.search_enable_products %},product{% endif %}{% if settings.search_enable_blog_posts %},article{% endif %}{% if settings.search_enable_pages %},page{% endif %}{% if settings.search_enable_collections %},collection{% endif %}{%- endcapture -%}
-
 <script>
   // This allows to expose several variables to the global scope, to be used in scripts
   window.themeVariables = {
@@ -12,8 +10,6 @@
       showVendor: {{ settings.show_vendor | json }},
       discountMode: {{ settings.discount_mode | json }},
       currencyCodeEnabled: {{ settings.currency_code_enabled | json }},
-      searchMode: {{ search_mode | remove_first: ',' | json }},
-      searchUnavailableProducts: {{ settings.search_unavailable_products | json }},
       cartType: {{ settings.cart_type | json }},
       cartCurrency: {{ cart.currency.iso_code | json }},
       mobileZoomFactor: 2.5

@@ -73,7 +73,8 @@
                               <input class="variant-swatch__radio visually-hidden" type="radio" name="option{{ option.position }}" form="{{ product_form_id }}" id="{{ option_id }}-{{ forloop.index }}" value="{{ value | escape }}" data-bind-value="{{ option_id }}-value" {% if value == option.selected_value %}checked="checked"{% endif %} aria-label="{{ value | escape }}">
                               <label class="variant-swatch__item" for="{{ option_id }}-{{ forloop.index }}">
                                 <span class="visually-hidden">{{ value }}</span>
-                                <img class="variant-swatch__image" loading="lazy" sizes="(max-width: 740px) 64px, 72px" {% render 'image-attributes', image: variant.featured_media, sizes: '64,72,128,144,192,216' %}>
+
+                                {{- variant.featured_media | image_url: width: variant.featured_media.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 64px, 72px', sizes: '64,72,128,144,192,216', class: 'variant-swatch__image' -}}
                               </label>
                             </div>
                             {%- break -%}
@@ -212,7 +213,9 @@
       {% if block.settings.image != blank %}
         <div class="product-form__image product-form__image--{{ block.settings.image_alignment }}" {{ block.shopify_attributes }}>
           {%- capture image_sizes -%}{{ block.settings.image_width }}, {{ block.settings.image_width | times: 2 }}, {{ block.settings.image_width | times: 3 }}{%- endcapture -%}
-          <img loading="lazy" style="max-width: {{ block.settings.image_width }}px" {% render 'image-attributes', image: block.settings.image, sizes: image_sizes %}>
+          {%- capture sizes_attribute -%}{{ block.settings.image_width }}px{%- endcapture -%}
+          {%- capture style_attribute -%}max-width: {{ block.settings.image_width }}px{%- endcapture -%}
+          {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: image_sizes, style: style_attribute -}}
         </div>
       {%- endif -%}
 

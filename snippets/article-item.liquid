@@ -1,7 +1,7 @@
 <div {% if settings.stagger_blog_posts_apparition %}reveal{% endif %} class="article-item {% if use_featured_layout %}{% if is_first %}article-item--featured{% else %}article-item--horizontal{% endif %}{% endif %} image-zoom">
   {%- if article.image -%}
     <a href="{{ article.url }}" class="article-item__image-container">
-      <img class="article-item__image" sizes="(max-width: 740px) 81vw, (max-width: 999px) 37vw, 425px" loading="lazy" {% render 'image-attributes', image: article.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000' %}>
+      {{- article.image | image_url: width: article.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 81vw, (max-width: 999px) 37vw, 425px', sizes: '600,700,800,1000,1200,1400,1600,1800,2000', class: 'article-item__image' -}}
 
       {%- if use_featured_layout and is_first -%}
         <span class="article-item__arrow prev-next-button prev-next-button--next">{% render 'icon' with 'nav-arrow-right', direction_aware: true %}</span>

@@ -52,7 +52,7 @@
                 {%- assign collection_image = item.settings.image | default: collection.featured_image -%}
               {%- endif -%}
 
-              <a href="{{ collection.url }}" class="list-collections__item image-zoom {% if section.settings.show_collection_title %}has-overlay{% endif %}">
+              <a id="block-{{ section.id }}-{{ item.id }}" href="{{ collection.url }}" class="list-collections__item image-zoom {% if section.settings.show_collection_title %}has-overlay{% endif %}">
                 <div class="list-collections__item-image-wrapper">
                   {%- comment -%}
                   IMPLEMENTATION NOTE: we set a minimum height for the collection image so that it does not look absurdly small if you have text on it. As a consequence,
@@ -62,9 +62,9 @@
 
                   {%- if collection_image.aspect_ratio > 2.5 -%}
                     {%- assign height_constraint = 800 | at_most: collection_image.height -%}
-                    <img class="list-collections__item-image" loading="lazy" sizes="(max-width: 740px) calc(100vw - 48px), (max-width: 999px) calc(50vw - 60px), 480px" {% render 'image-attributes', image: collection_image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', height_constraint: height_constraint, crop: 'center' %}>
+                    {{- collection_image | image_url: width: collection_image.width, height: height_constraint, crop: 'center' | image_tag: loading: 'lazy', sizes: '(max-width: 740px) calc(100vw - 48px), (max-width: 999px) calc(50vw - 60px), 480px', widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', class: 'list-collections__item-image' -}}
                   {%- else -%}
-                    <img class="list-collections__item-image" loading="lazy" sizes="(max-width: 740px) calc(100vw - 48px), (max-width: 999px) calc(50vw - 60px), 480px" {% render 'image-attributes', image: collection_image, sizes: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400' %}>
+                    {{- collection_image | image_url: width: collection_image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) calc(100vw - 48px), (max-width: 999px) calc(50vw - 60px), 480px', widths: '200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400', class: 'list-collections__item-image' -}}
                   {%- endif -%}
                 </div>
 

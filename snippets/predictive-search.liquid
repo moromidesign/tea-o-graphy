@@ -5,9 +5,6 @@
     <form id="predictive-search-form" action="{{ routes.search_url }}" method="get" class="predictive-search__form">
       {%- render 'icon' with 'header-search' -%}
 
-      <input type="hidden" name="type" value="product">
-      <input type="hidden" name="options[prefix]" value="last">
-      <input type="hidden" form="predictive-search-form" name="options[unavailable_products]" value="{{ settings.search_unavailable_products }}">
       <input class="predictive-search__input" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="{{ 'search.general.title' | t }}" placeholder="{{ 'search.general.search_placeholder' | t }}">
     </form>
 

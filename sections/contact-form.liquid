@@ -47,7 +47,7 @@
       <div class="contact {% unless blends_with_background %}vertical-breather{% endunless %}">
         {%- capture aside_content -%}
           {%- if section.settings.image != blank -%}
-            <img class="contact__image" loading="lazy" sizes="(max-width: 740px) calc(100vw - 24px * 2), 530px" {% render 'image-attributes', image: section.settings.image %}>
+            {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) calc(100vw - 24px * 2), 530px', widths: '200,300,400,500,600,800,1000,1200,1400', class: 'contact__image' -}}
           {%- endif -%}
 
           {%- capture aside_text_1 -%}
@@ -203,6 +203,9 @@
 {
   "name": "Contact",
   "class": "shopify-section--contact-form",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
       "type": "image_picker",

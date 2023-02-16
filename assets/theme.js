@@ -2502,7 +2502,9 @@
         await this._setupPlayer();
       }
       if (this.provider === "youtube") {
-        this.querySelector("iframe").contentWindow.postMessage(JSON.stringify({ event: "command", func: "playVideo", args: "" }), "*");
+        setTimeout(() => {
+          this.querySelector("iframe").contentWindow.postMessage(JSON.stringify({ event: "command", func: "playVideo", args: "" }), "*");
+        }, 150);
       } else if (this.provider === "vimeo") {
         this.querySelector("iframe").contentWindow.postMessage(JSON.stringify({ method: "play" }), "*");
       }
@@ -2637,8 +2639,14 @@
       }
     }
     _replaceContent() {
-      const node = this.querySelector("template").content.firstElementChild.cloneNode(true);
-      this.innerHTML = "";
+      let node = this.querySelector("template");
+      if (!node) {
+        return;
+      }
+      node = node.content.firstElementChild.cloneNode(true);
+      if (!this.hasAttribute("autoplay")) {
+        this.innerHTML = "";
+      }
       this.appendChild(node);
       this.firstElementChild.addEventListener("play", () => {
         this.dispatchEvent(new CustomEvent("video:played", { bubbles: true }));
@@ -2922,7 +2930,7 @@
       return this.getAttribute("terms");
     }
     get completeFor() {
-      return JSON.parse(this.getAttribute("complete-for")).filter((item) => !(item === ""));
+      return this.getAttribute("complete-for").split(",");
     }
     async _completeSearch() {
       const promisesList = [];
@@ -2983,15 +2991,16 @@
   // js/custom-element/section/product-recommendations/product-recommendations.js
   var ProductRecommendations = class extends HTMLElement {
     async connectedCallback() {
-      if (!this.hasAttribute("use-automatic-recommendations")) {
-        return;
-      }
-      const response = await fetch(`${window.themeVariables.routes.productRecommendationsUrl}?product_id=${this.productId}&limit=${this.recommendationsCount}&section_id=${this.sectionId}`);
+      const response = await fetch(`${window.themeVariables.routes.productRecommendationsUrl}?product_id=${this.productId}&limit=${this.recommendationsCount}&section_id=${this.sectionId}&intent=${this.intent}`);
       const div = document.createElement("div");
       div.innerHTML = await response.text();
       const productRecommendationsElement = div.querySelector("product-recommendations");
       if (productRecommendationsElement.hasChildNodes()) {
         this.innerHTML = productRecommendationsElement.innerHTML;
+      } else {
+        if (this.intent === "complementary") {
+          this.remove();
+        }
       }
     }
     get productId() {
@@ -3002,6 +3011,9 @@
     }
     get recommendationsCount() {
       return parseInt(this.getAttribute("recommendations-count") || 4);
+    }
+    get intent() {
+      return this.getAttribute("intent");
     }
   };
   window.customElements.define("product-recommendations", ProductRecommendations);
@@ -4261,7 +4273,7 @@
       }
     }
     async _doPredictiveSearch(term) {
-      const response = await fetch(`${window.themeVariables.routes.predictiveSearchUrl}?q=${encodeURIComponent(term)}&resources[limit]=10&resources[type]=${window.themeVariables.settings.searchMode}&resources[options[unavailable_products]]=${window.themeVariables.settings.searchUnavailableProducts}&resources[options[fields]]=title,body,product_type,variants.title,variants.sku,vendor&section_id=predictive-search`, {
+      const response = await fetch(`${window.themeVariables.routes.predictiveSearchUrl}?q=${encodeURIComponent(term)}&resources[limit]=10&resources[limit_scope]=each&section_id=predictive-search`, {
         signal: this.abortController.signal
       });
       const div = document.createElement("div");
@@ -4269,64 +4281,12 @@
       return { hasResults: div.querySelector(".predictive-search__results-categories") !== null, html: div.firstElementChild.innerHTML };
     }
     async _doLiquidSearch(term) {
-      let promises = [], supportedTypes = window.themeVariables.settings.searchMode.split(",").filter((item) => item !== "collection");
-      supportedTypes.forEach((searchType) => {
-        promises.push(fetch(`${window.themeVariables.routes.searchUrl}?section_id=predictive-search-compatibility&q=${term}&type=${searchType}&options[unavailable_products]=${window.themeVariables.settings.searchUnavailableProducts}&options[prefix]=last`, {
-          signal: this.abortController.signal
-        }));
+      const response = await fetch(`${window.themeVariables.routes.searchUrl}?q=${encodeURIComponent(term)}&resources[limit]=50&section_id=predictive-search-compatibility`, {
+        signal: this.abortController.signal
       });
-      let results = await Promise.all(promises), resultsByCategories = {};
-      for (const [index, value] of results.entries()) {
-        const resultAsText = await value.text();
-        const fakeDiv = document.createElement("div");
-        fakeDiv.innerHTML = resultAsText;
-        fakeDiv.innerHTML = fakeDiv.firstElementChild.innerHTML;
-        if (fakeDiv.childElementCount > 0) {
-          resultsByCategories[supportedTypes[index]] = fakeDiv.innerHTML;
-        }
-      }
-      if (Object.keys(resultsByCategories).length > 0) {
-        const entries = Object.entries(resultsByCategories), keys = Object.keys(resultsByCategories);
-        let html = `
-        <tabs-nav class="tabs-nav tabs-nav--edge2edge tabs-nav--narrow tabs-nav--no-border">
-          <scrollable-content class="tabs-nav__scroller hide-scrollbar">
-            <div class="tabs-nav__scroller-inner">
-              <div class="tabs-nav__item-list">
-      `;
-        for (let [type, value] of entries) {
-          html += `
-          <button type="button" class="tabs-nav__item heading heading--small" aria-expanded="${type === keys[0] ? "true" : "false"}" aria-controls="predictive-search-${type}">
-            ${window.themeVariables.strings["search" + type.charAt(0).toUpperCase() + type.slice(1) + "s"]}
-          </button>
-        `;
-        }
-        html += `
-              </div>
-            </div>
-          </scrollable-content>
-        </tabs-nav>
-      `;
-        html += '<div class="predictive-search__results-categories">';
-        for (let [type, value] of entries) {
-          html += `
-          <div class="predictive-search__results-categories-item" ${type !== keys[0] ? "hidden" : ""} id="predictive-search-${type}">
-            ${value}
-          </div>
-        `;
-        }
-        html += "</div>";
-        return { hasResults: true, html };
-      } else {
-        return {
-          hasResults: false,
-          html: `
-        <p class="text--large">${window.themeVariables.strings.searchNoResults}</p>
-          <div class="button-wrapper">
-            <button type="button" data-action="reset-search" class="button button--primary">${window.themeVariables.strings.searchNewSearch}</button>
-          </div>
-        `
-        };
-      }
+      const div = document.createElement("div");
+      div.innerHTML = await response.text();
+      return { hasResults: div.querySelector(".predictive-search__results-categories") !== null, html: div.firstElementChild.innerHTML };
     }
     _startNewSearch() {
       this.inputElement.value = "";
@@ -5906,7 +5866,8 @@
       return parseFloat(this.getAttribute("threshold"));
     }
     _onCartUpdated(event) {
-      this.style.setProperty("--progress", Math.min(parseFloat(event.detail["cart"]["total_price"]) / this.threshold, 1));
+      const totalPrice = event.detail["cart"]["items"].filter((item) => item["requires_shipping"]).reduce((sum, item) => sum + item["final_line_price"], 0);
+      this.style.setProperty("--progress", Math.min(totalPrice / this.threshold, 1));
     }
   };
   window.customElements.define("free-shipping-bar", FreeShippingBar);

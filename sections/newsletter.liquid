@@ -38,7 +38,11 @@
   <image-with-text-block {% if section.settings.reveal_on_scroll %}reveal-on-scroll{% endif %} class="image-with-text-block image-with-text-block--small image-with-text-block--cover">
     <div class="image-with-text-block__image-wrapper">
       {%- if section.settings.image != blank -%}
-        <img class="image-with-text-block__image" {% if section.settings.reveal_on_scroll %}reveal{% endif %} loading="lazy" sizes="100vw" {% render 'image-attributes', image: section.settings.image, sizes: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000' %}>
+        {%- if section.settings.reveal_on_scroll -%}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: reveal: true, loading: 'lazy', widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'image-with-text-block__image' -}}
+        {%- else -%}
+          {{- section.settings.image | image_url: width: section.settings.image.width | image_tag: loading: 'lazy', widths: '600,700,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000', class: 'image-with-text-block__image' -}}
+        {%- endif -%}
       {%- else -%}
         {%- capture image_classes -%}image-with-text-block__image image-with-text-block__image--placeholder placeholder-background{%- endcapture -%}
 
@@ -112,6 +116,9 @@
 {
   "name": "Newsletter",
   "class": "shopify-section--newsletter",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
       "type": "paragraph",

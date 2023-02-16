@@ -63,15 +63,19 @@
 <section>
   {%- if search.performed -%}
     {%- assign first_matching_type = search.results.first.object_type -%}
+    {%- assign complete_for = '' -%}
 
     {%- capture label -%}
       {%- case first_matching_type -%}
         {%- when 'product' -%}
           {{ 'search.general.products' | t }} ({{ search.results_count }})
+          {%- assign complete_for = 'article,page' -%}
         {%- when 'article' -%}
           {{ 'search.general.articles' | t }} ({{ search.results_count }})
+          {%- assign complete_for = 'product,page' -%}
         {%- when 'page' -%}
           {{ 'search.general.pages' | t }} ({{ search.results_count }})
+          {%- assign complete_for = 'product,article' -%}
       {%- endcase -%}
     {%- endcapture -%}
 
@@ -80,9 +84,7 @@
         <h1 class="heading h2">{{ 'search.general.terms' | t: terms: search.terms }}</h1>
 
         <form class="main-search__form" action="{{ routes.search_url }}" method="get">
-          <input type="hidden" name="type" value="product">
-          <input type="hidden" name="options[prefix]" value="last">
-          <input type="hidden" name="options[unavailable_products]" value="{{ settings.search_unavailable_products }}">
+          <input type="hidden" name="type" value="{{ search.results.first.object_type | default: 'product' }}">
 
           <button class="main-search__submit tap-area" type="submit">{%- render 'icon' with 'header-search' -%}</button>
           <input class="main-search__input input__field" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="{{ 'search.general.title' | t }}" placeholder="{{ 'search.general.search_placeholder' | t }}" value="{{ search.terms | escape }}">
@@ -105,9 +107,7 @@
     <div class="container">
       {%- if search.results_count > 0 or search.filters != empty -%}
         <div class="page-content page-content--fluid">
-          {%- capture search_mode -%}{% if settings.search_enable_products %},product{% endif %}{% if settings.search_enable_blog_posts %},article{% endif %}{% if settings.search_enable_pages %},page{% endif %}{%- endcapture -%}
-
-          <search-page section-id="{{ section.id }}" terms="{{ search.terms | escape }}" complete-for="{{ search_mode | remove_first: ',' | remove: first_matching_type | split: ',' | json | escape }}" class="main-search__results">
+          <search-page section-id="{{ section.id }}" terms="{{ search.terms | escape }}" complete-for="{{ complete_for }}" class="main-search__results">
             {%- comment -%}
             IMPLEMENTATION NOTE: We show the results of the first category, other ones will be loaded in JavaScript. Also, the product rendering is much more
               complex as it allows filtering, so we use a different strategy.
@@ -243,7 +243,7 @@
                           <p>{{ 'collection.general.no_results_label' | t }}</p>
 
                           <div class="button-wrapper">
-                            <a href="{{ routes.search_url }}?sort_by={{ search_sort_by }}&q={{ search.terms | escape }}&type=product&options[prefix]=last&options[unavailable_products]={{ settings.search_unavailable_products }}" data-action="clear-filters" class="button button--primary">{{ 'collection.general.no_results_button' | t }}</a>
+                            <a href="{{ routes.search_url }}" data-action="clear-filters" class="button button--primary">{{ 'collection.general.no_results_button' | t }}</a>
                           </div>
                         </div>
                       {%- endif -%}
@@ -287,10 +287,6 @@
         <h1 class="heading h2">{{ 'search.general.title' | t }}</h1>
 
         <form class="main-search__form" action="{{ routes.search_url }}" method="get">
-          <input type="hidden" name="type" value="product">
-          <input type="hidden" name="options[prefix]" value="last">
-          <input type="hidden" name="options[unavailable_products]" value="{{ settings.search_unavailable_products }}">
-
           <button class="main-search__submit tap-area" type="submit">{%- render 'icon' with 'header-search' -%}</button>
           <input class="main-search__input input__field" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="{{ 'search.general.title' | t }}" placeholder="{{ 'search.general.search_placeholder' | t }}">
         </form>

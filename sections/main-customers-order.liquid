@@ -151,7 +151,7 @@
                             <td class="line-item__product">
                               <div class="line-item__content-wrapper">
                                 <a href="{{ line_item.url }}" class="line-item__image-wrapper">
-                                  <img class="line-item__image" loading="sizes" sizes="(max-width: 740px) 80px, 92px" {% render 'image-attributes', image: line_item.image, sizes: '80,92,160,184,240,276' %}>
+                                  {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 92px', widths: '80,92,160,184,240,276', class: 'line-item__image' -}}
                                 </a>
 
                                 {%- capture unit_price -%}

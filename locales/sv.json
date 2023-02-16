@@ -4,7 +4,7 @@
       "page": "Sida {{ Page }}"
     },
     "label": {
-      "color": "Färg\n",
+      "color": "Färg",
       "white": "Vit",
       "size": "Storlek"
     },
@@ -13,7 +13,7 @@
       "home": "Hem"
     },
     "pagination": {
-      "previous_page": "Föregående\n",
+      "previous_page": "Föregående",
       "next_page": "Nästa",
       "go_to_page": "Navigera till sidan {{page}}"
     },
@@ -284,7 +284,7 @@
       "title": "Aktivera konto",
       "instructions": "Ange ett lösenord för att skapa ditt konto:",
       "password": "Lösenord",
-      "password_confirmation": "Bekräfta lösenord\n",
+      "password_confirmation": "Bekräfta lösenord",
       "submit": "Aktivera",
       "cancel": "Avbryt"
     },
@@ -374,6 +374,7 @@
       "new_search": "Ny sökning",
       "view_all_results": "Visa alla resultat",
       "products": "Produkter",
+      "suggestions": "Förslag",
       "articles": "Journal",
       "pages": "Sidor",
       "collections": "Samlingar"

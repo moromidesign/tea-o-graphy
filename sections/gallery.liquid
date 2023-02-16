@@ -65,8 +65,9 @@
                     {%- assign mobile_size = 370 | times: block.settings.image.aspect_ratio | ceil -%}
                     {%- assign tablet_size = 520 | times: block.settings.image.aspect_ratio | ceil -%}
                     {%- assign desktop_size = 600 | times: block.settings.image.aspect_ratio | ceil -%}
+                    {%- capture sizes_attribute -%}(max-width: 740px) {{ mobile_size }}px, (max-width: 999px) {{ tablet_size }}px, {{ desktop_size }}px{%- endcapture -%}
 
-                    <img loading="lazy" sizes="(max-width: 740px) {{ mobile_size }}px, (max-width: 999px) {{ tablet_size }}px, {{ desktop_size }}px" class="gallery__image" {% render 'image-attributes', image: block.settings.image, sizes: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000' %}>
+                    {{ block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes_attribute, widths: '300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000', class: 'gallery__image' }}
                   {%- else -%}
                     {{- 'image' | placeholder_svg_tag: 'gallery__image gallery__image placeholder-background' -}}
                   {%- endif -%}
@@ -108,6 +109,9 @@
 {
   "name": "Gallery",
   "class": "shopify-section--gallery",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
   "blocks": [
     {
       "type": "image",

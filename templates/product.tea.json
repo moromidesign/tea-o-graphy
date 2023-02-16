@@ -116,11 +116,8 @@
       },
       "block_order": [
         "description",
-        "7381c044-3d8f-46e6-8846-73c2416d5b9a",
         "54ae40b2-2867-466e-b22f-e0ee45344bb3",
-        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7",
-        "af940418-16ac-47d5-8d15-e54a38700add",
-        "4884cfce-cb77-417d-adeb-834a85106e39"
+        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7"
       ],
       "settings": {}
     },
@@ -130,7 +127,6 @@
         "subheading": "",
         "title": "You may also like",
         "recommendations_count": 4,
-        "products": [],
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }

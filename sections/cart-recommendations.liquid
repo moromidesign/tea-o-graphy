@@ -6,7 +6,7 @@
   }
 </style>
 
-<product-recommendations section-id="{{ section.id }}" product-id="{{ cart.items.first.product_id }}" use-automatic-recommendations recommendations-count="10" class="section {% unless blends_with_background %}section--flush{% endunless %}" hidden>
+<product-recommendations section-id="{{ section.id }}" intent="related" product-id="{{ cart.items.first.product_id }}" recommendations-count="10" class="section {% unless blends_with_background %}section--flush{% endunless %}" hidden>
   {%- assign acceptable_recommendations_count = 0 -%}
 
   {%- for product in recommendations.products -%}
