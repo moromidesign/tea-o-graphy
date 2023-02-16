@@ -4,11 +4,22 @@
   "sections": {
     "newsletter-popup": {
       "type": "newsletter-popup",
-      "settings": {}
+      "settings": {
+        "apparition_delay": 5,
+        "show_only_on_index": true,
+        "show_only_for_visitors": true,
+        "show_only_once": true,
+        "image_position": "left",
+        "title": "Get 10% off",
+        "content": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>"
+      }
     },
     "privacy-banner": {
       "type": "privacy-banner",
-      "settings": {}
+      "settings": {
+        "cookie_bar_title": "we make cookies! just not that kind..",
+        "cookie_bar_content": "<p>Will you agree to the processing of your data in accordance with the conditions set out in our privacy policy?<\/p>"
+      }
     }
   },
   "order": [
