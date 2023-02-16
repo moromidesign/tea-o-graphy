@@ -17,7 +17,15 @@
           {%- capture block_content -%}
             {%- case block.type -%}
               {%- when 'image' -%}
-                {%- if block.settings.image != blank -%}
+                {% comment %} MOROMI added link and target to footer image {% endcomment %}
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" target="_blank">
+                    {%- capture sizes_attribute -%}{{ block.settings.image_width }}px{%- endcapture -%}
+                    {%- capture style_attribute -%}width: {{ block.settings.image_width }}px{%- endcapture -%}
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style_attribute, sizes: sizes_attribute, widths: '100,200,300,400,500,600', class: 'footer__image' -}}
+                  </a>
+                {%- else block.settings.image != blank -%}
+                {% comment %} MOROMI END {% endcomment %}
                   {%- capture sizes_attribute -%}{{ block.settings.image_width }}px{%- endcapture -%}
                   {%- capture style_attribute -%}width: {{ block.settings.image_width }}px{%- endcapture -%}
                   {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style_attribute, sizes: sizes_attribute, widths: '100,200,300,400,500,600', class: 'footer__image' -}}
@@ -193,9 +201,20 @@
             {%- endif -%}
           {%- endform -%}
         {%- endif -%}
-
-        <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
-
+        
+        {%- comment -%}
+          ===============
+          copyright and footer text edited Dec 7 22
+          Original code below:
+          ===============
+          <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
+        {%- endcomment -%}
+        
+        <span class="footer__copyright text--xsmall text--subdued"
+          >©{{ shop.name }} 2022<span class="square-separator square-separator--block square-separator--subdued"></span>
+          {{ powered_by_link | replace: '<a', '<a class="link--faded"' -}}
+        </span>
+        
         {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
           <div class="footer__payment-methods">
             <span class="footer__payment-methods-label text--xsmall text--subdued">{{ 'footer.general.we_accept' | t }}</span>
@@ -257,6 +276,11 @@
           "id": "image",
           "label": "Image",
           "info": "300 x 300px .png recommended"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         },
         {
           "type": "range",

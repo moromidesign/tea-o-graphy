@@ -2,60 +2,38 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
-    "text-with-icons": {
-      "type": "text-with-icons",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-box",
-            "title": "Free shipping",
-            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-phone",
-            "title": "Customer service",
-            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-lock",
-            "title": "Secure payment",
-            "content": "<p>Your payment information is processed securely.<\/p>"
-          }
-        },
-        "item-4": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-email",
-            "title": "Contact us",
-            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2",
-        "item-3",
-        "item-4"
-      ],
-      "settings": {}
-    },
     "newsletter": {
       "type": "newsletter",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "Subscribe to our newsletter",
+        "content": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+        "text_position": "right",
+        "text_alignment": "left",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
     },
     "footer": {
       "type": "footer",
       "blocks": {
+        "9626741c-ff51-4d86-adce-819c4172a3ea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tea.o.graphy_ring_black.jpg",
+            "link": "\/",
+            "image_width": 150
+          }
+        },
         "text": {
           "type": "text",
-          "settings": {}
+          "settings": {
+            "title": "tea.o.graphy",
+            "content": "<p>Mon–Sat • <em>11am - 5pm<\/em><br\/>Sunday • <em>closed<\/em><\/p><p>call • <a href=\"tel:575-741-6316\" title=\"tel:575-741-6316\">575-741-6316<\/a><br\/><a href=\"https:\/\/www.google.com\/maps\/dir\/\/125+Kit+Carson+Rd,+Taos,+NM+87571\/@36.4066793,-105.6420144,12z\/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x87176522b1249af9:0x7b8e4c7db143ba8a!2m2!1d-105.5719743!2d36.4066997\" target=\"_blank\" title=\"https:\/\/www.google.com\/maps\/dir\/\/125+Kit+Carson+Rd,+Taos,+NM+87571\/@36.4066793,-105.6420144,12z\/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x87176522b1249af9:0x7b8e4c7db143ba8a!2m2!1d-105.5719743!2d36.4066997\">125 Kit Carson Rd<br\/>Taos, NM 87571<\/a><\/p>"
+          }
         },
         "links": {
           "type": "links",
@@ -63,26 +41,35 @@
             "menu": "footer"
           }
         },
-        "newsletter": {
-          "type": "newsletter",
-          "settings": {}
+        "3b470c0d-0b4d-4492-9017-445637935a82": {
+          "type": "links",
+          "settings": {
+            "menu": "resources"
+          }
         },
         "social_media": {
           "type": "social_media",
-          "settings": {}
+          "settings": {
+            "title": "Follow us",
+            "content": ""
+          }
         }
       },
       "block_order": [
+        "9626741c-ff51-4d86-adce-819c4172a3ea",
         "text",
         "links",
-        "newsletter",
+        "3b470c0d-0b4d-4492-9017-445637935a82",
         "social_media"
       ],
-      "settings": {}
+      "settings": {
+        "show_payment_icons": false,
+        "show_country_selector": false,
+        "show_locale_selector": true
+      }
     }
   },
   "order": [
-    "text-with-icons",
     "newsletter",
     "footer"
   ]

@@ -74,18 +74,10 @@
                 {{- 'image' | placeholder_svg_tag: 'logo-list__image logo-list__image--placeholder' -}}
               {%- endif -%}
             {%- endcapture -%}
-
+            
             {%- if block.settings.link -%}
-
-
-
-
-{%- comment -%}  ===============
-
-added target="_blank" to links
-
-=============== {%- endcomment -%}          
-              
+            
+              {%- comment -%} MOROMI added target="_blank" to links {%- endcomment -%}          
               <a href="{{ block.settings.link }}" target="_blank" {% if section.settings.reveal_on_scroll %}reveal{% endif %} class="logo-list__item" {{ block.shopify_attributes }}>
                 {{- logo_content -}}
               </a>

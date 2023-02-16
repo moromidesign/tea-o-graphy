@@ -367,8 +367,6 @@
     </div>
   {%- endif -%}
 
-  
-
   <div class="product-content__featured_data-and-product"> {%- comment -%} Added to support flex properties for two blocks in featured area. {%- endcomment -%}
   
     {%- comment -%} ==========
@@ -395,30 +393,27 @@
     {%- endif -%}
     {%- comment -%} END Featured data section {%- endcomment -%}
 
-    {%- assign featured_products_block = section.blocks | where: 'type', 'featured_products' | first -%}
-      
-      {%- if featured_products_block != blank -%}
-        {%- assign product_1 = featured_products_block.settings.product_1 -%}
-        {%- assign product_2 = featured_products_block.settings.product_2 -%}
+    {%- assign complementary_products_block = section.blocks | where: 'type', 'complementary_products' | first -%}
     
-        {%- if featured_products_block.settings.products != blank -%}
-          <div class="product-content__featured-products">
-            {%- if featured_products_block.settings.title != blank -%}
-              <p class="product-content__featured-products-title heading heading--small">{{ featured_products_block.settings.title }}</p>
-            {%- endif -%}
-    
-            <div class="scroller">
-              <div class="scroller__inner">
-                <div class="product-content__featured-products-list">
-                  {%- for product in featured_products_block.settings.products -%}
-                    {%- render 'product-item', product: product, reduced_content: true, reduced_font_size: true, sizes_attribute: '(max-width: 740px) 105px, 215px' -%}
-                  {%- endfor -%}
-                </div>
+    {%- if complementary_products_block != blank -%}
+      <product-recommendations class="product-content__featured-products" intent="complementary" recommendations-count="2" product-id="{{ product.id }}" section-id="{{ section.id }}">
+        {%- if recommendations.performed and recommendations.products_count > 0 -%}
+          {%- if complementary_products_block.settings.title != blank -%}
+            <p class="product-content__featured-products-title heading heading--small">{{ complementary_products_block.settings.title | escape }}</p>
+          {%- endif -%}
+  
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-content__featured-products-list">
+                {%- for product in recommendations.products -%}
+                  {%- render 'product-item', product: product, reduced_content: true, reduced_font_size: true, sizes_attribute: '(max-width: 740px) 105px, 215px' -%}
+                {%- endfor -%}
               </div>
             </div>
           </div>
         {%- endif -%}
-      {%- endif -%}
+      </product-recommendations>
+    {%- endif -%}
     
   </div>{%- comment -%} END featured DIV {%- endcomment -%}
   
@@ -571,6 +566,25 @@
           "id": "title",
           "label": "Heading",
           "default": "Featured products"
+        }
+      ]
+    },
+    {
+      "name": "Featured data",
+      "type": "featured_data",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Featured details"
+        },
+        {
+          "type": "liquid",
+          "id": "details",
+          "label": "Details",
+          "default": "<p>Add details and metafields about your product</p>"
         }
       ]
     },

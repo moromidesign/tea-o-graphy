@@ -186,7 +186,6 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/tea.o.graphy_ring_black.jpg",
-              "link": "https:\/\/tea-o-graphy.com\/",
               "image_width": 200
             }
           },
@@ -227,10 +226,7 @@
         "settings": {
           "show_payment_icons": false,
           "show_country_selector": false,
-          "show_locale_selector": true,
-          "show_cookie_bar": true,
-          "cookie_bar_title": "we make cookies! just not that kind..",
-          "cookie_bar_content": "<p>Will you agree to the processing of your data in accordance with the conditions set out in our privacy policy?<\/p>"
+          "show_locale_selector": true
         }
       },
       "popup": {

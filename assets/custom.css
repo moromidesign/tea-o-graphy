@@ -212,6 +212,13 @@ a.product-item-meta__title {
   .product-content__featured-data {
     width: calc(100vw - var(--container-gutter) * 2);
   }
+  .product-content__featured_data-and-product {
+    gap: var(--grid-gap);
+  }
+  .product-content__featured_data-and-product
+    .product-content__featured-products-list {
+    margin-top: 0px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .product-content__featured-data {
@@ -325,13 +332,12 @@ h3.heading.heading--large {
 */
 
 /* Tea Fam on about page */
-#shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+#shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
   image-with-text-overlay.image-overlay--large {
   object-fit: contain;
   --image-height: calc(100vw / 2.05);
 }
-#shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
-  image-with-text-overlay
+#shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
   .image-overlay__image-wrapper:after {
   background-image: linear-gradient(
     15deg,
@@ -342,27 +348,27 @@ h3.heading.heading--large {
 }
 
 @media screen and (max-width: 1024px) {
-  #shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+  #shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
     image-with-text-overlay
     .image-overlay__image-wrapper:after {
-    /*     background-image: unset; */
     background: rgba(255, 255, 255, 0.1);
   }
-  #shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+  #shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
     image-with-text-overlay
     .image-overlay__image {
     height: var(--image-height);
   }
-  #shopify-section-template--15721507192987__2ce365e0-24ec-404b-a775-7f69031e2a32
+  #shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
     image-with-text-overlay.image-overlay--large {
     height: calc(100vw / 2.05 + 160px);
   }
 }
 /* Wholesale top image */
-#shopify-section-template--15745038909595__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
+#shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
+  .image-overlay__image-wrapper:after,
+#shopify-section-template--15782731972763__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
   .image-overlay__image-wrapper:after {
   background: unset;
-
   background-image: linear-gradient(
     55deg,
     rgb(255 255 255 / 90%) 21%,
@@ -371,7 +377,7 @@ h3.heading.heading--large {
   );
 }
 @media screen and (max-width: 1024px) {
-  #shopify-section-template--15745038909595__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
+  #shopify-section-template--15782731972763__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
     .image-overlay__image-wrapper:after {
     background: unset;
     background: rgb(255 255 255 / 75%);
@@ -454,7 +460,7 @@ blockquote.testimonial__content.blockquote {
 .recipe-card #rk_parent .rk_modern .rk_container .rk_secondary {
   display: flex;
   flex-direction: none;
-=======
+}
 /* adjust spacing around insta-feed */
 .shopify-section--apps #insta-feed {
   margin-top: -40px;
@@ -464,11 +470,10 @@ blockquote.testimonial__content.blockquote {
     margin-top: -10px;
   }
 }
-.shopify-section--apps #insta-feed div:first-of-type {
+.shopify-section--apps div#insta-feed > div:first-of-type {
   padding: 0px 40px;
 }
 #insta-feed a.slider-arrow,
 .instafeed-shopify a.slider-arrow {
-  /* margin-top: 12%; */
->>>>>>> origin/main
+  margin-top: ;
 }
