@@ -4,6 +4,7 @@
   "sections": {
     "newsletter-popup": {
       "type": "newsletter-popup",
+      "disabled": true,
       "settings": {
         "apparition_delay": 5,
         "show_only_on_index": true,

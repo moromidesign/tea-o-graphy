@@ -24,7 +24,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/tea.o.graphy_ring_black.jpg",
-            "link": "",
+            "link": "\/",
             "image_width": 200
           }
         },
