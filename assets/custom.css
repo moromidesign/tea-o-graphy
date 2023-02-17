@@ -332,12 +332,12 @@ h3.heading.heading--large {
 */
 
 /* Tea Fam on about page */
-#shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
+#shopify-section-template--15794950242459__2ce365e0-24ec-404b-a775-7f69031e2a32
   image-with-text-overlay.image-overlay--large {
   object-fit: contain;
   --image-height: calc(100vw / 2.05);
 }
-#shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
+#shopify-section-template--15794950242459__2ce365e0-24ec-404b-a775-7f69031e2a32
   .image-overlay__image-wrapper:after {
   background-image: linear-gradient(
     15deg,
@@ -348,25 +348,23 @@ h3.heading.heading--large {
 }
 
 @media screen and (max-width: 1024px) {
-  #shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
+  #shopify-section-template--15794950242459__2ce365e0-24ec-404b-a775-7f69031e2a32
     image-with-text-overlay
     .image-overlay__image-wrapper:after {
     background: rgba(255, 255, 255, 0.1);
   }
-  #shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
+  #shopify-section-template--15794950242459__2ce365e0-24ec-404b-a775-7f69031e2a32
     image-with-text-overlay
     .image-overlay__image {
     height: var(--image-height);
   }
-  #shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
+  #shopify-section-template--15794950242459__2ce365e0-24ec-404b-a775-7f69031e2a32
     image-with-text-overlay.image-overlay--large {
     height: calc(100vw / 2.05 + 160px);
   }
 }
 /* Wholesale top image */
-#shopify-section-template--15782731677851__2ce365e0-24ec-404b-a775-7f69031e2a32
-  .image-overlay__image-wrapper:after,
-#shopify-section-template--15782731972763__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
+#shopify-section-template--15794950373531__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
   .image-overlay__image-wrapper:after {
   background: unset;
   background-image: linear-gradient(
@@ -377,7 +375,7 @@ h3.heading.heading--large {
   );
 }
 @media screen and (max-width: 1024px) {
-  #shopify-section-template--15782731972763__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
+  #shopify-section-template--15794950373531__9e51bbc8-7d2d-43ec-9d92-fca5602d25d8
     .image-overlay__image-wrapper:after {
     background: unset;
     background: rgb(255 255 255 / 75%);
