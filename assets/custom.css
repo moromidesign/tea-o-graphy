@@ -408,10 +408,21 @@ blockquote.testimonial__content.blockquote {
   }
 }
 
-<<<<<<< HEAD
 /* 
 * Recipe Kit Design Changes
 */
+@media screen and (min-width: 1000px) {
+  .article__header .article__image-wrapper--square {
+    max-height: 300px;
+    width: unset;
+  }
+  .article__header .article__image {
+    object-fit: contain;
+  }
+}
+.article__content .rte > div.recipe-card {
+  margin-top: var(--container-gutter);
+}
 .recipe-card #rk_parent .select_div .original_id_select {
   padding: 0 0px 0 6px;
   max-width: 100%;
@@ -425,6 +436,9 @@ blockquote.testimonial__content.blockquote {
   h4.rk_group_heading {
   font-size: var(--heading-small-font-size);
 }
+.rk_header .rk_grid:first-child {
+  flex-wrap: wrap-reverse;
+}
 .recipe-card #rk_parent .rk_modern .rk_container .rk_grid .rk_primary {
   flex: 1 0 40%;
 }
@@ -433,7 +447,7 @@ blockquote.testimonial__content.blockquote {
 }
 .recipe-card #rk_parent .rk_modern .rk_container .rk_details .rk_column {
   float: none;
-  flex: 1 1 119px;
+  flex: 1 1 110px;
   padding-bottom: 0px;
   padding-right: 0px;
   justify-content: center;
@@ -450,15 +464,27 @@ blockquote.testimonial__content.blockquote {
   flex-wrap: wrap;
   gap: 18px;
 }
+.recipe-card #rk_parent .rk_modern .rk_container .rk_secondary {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: none;
+}
 .recipe-card #rk_parent .rk_modern .rk_container .rk_social li {
   margin: 0 12px;
   flex: 0 1 20px;
   padding: 0px;
 }
-.recipe-card #rk_parent .rk_modern .rk_container .rk_secondary {
-  display: flex;
-  flex-direction: none;
+@media only screen and (min-width: 1024px) {
+  .recipe-card #rk_parent .rk_modern .rk_container .rk_grid .rk_column_third {
+    width: 37%;
+  }
 }
+@media only screen and (min-width: 1024px) {
+  .recipe-card #rk_parent .rk_modern .rk_container .rk_image img {
+    height: 200px;
+  }
+}
+
 /* adjust spacing around insta-feed */
 .shopify-section--apps #insta-feed {
   margin-top: -40px;
@@ -468,6 +494,7 @@ blockquote.testimonial__content.blockquote {
     margin-top: -10px;
   }
 }
+
 .shopify-section--apps div#insta-feed > div:first-of-type {
   padding: 0px 40px;
 }
