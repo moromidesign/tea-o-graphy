@@ -420,6 +420,14 @@ blockquote.testimonial__content.blockquote {
     object-fit: contain;
   }
 }
+a.article__category.heading.heading--small,
+span.article__category.heading.heading--small {
+  display: inline-block;
+  margin: 0px 0px;
+}
+span.article__category.heading.heading--small {
+  margin: 0 10px 0 6px;
+}
 .article__content .rte > div.recipe-card {
   margin-top: var(--container-gutter);
 }

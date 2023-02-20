@@ -48,17 +48,23 @@
     {%- if section.settings.show_category and article.tags.size > 0 -%}
       <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="article__category heading heading--small">{{ article.tags.first }}</a>
     {%- endif -%}
+    
+    {% comment %} MOROMI added jump to recipe button {% endcomment %}
     {%- if blog.title == 'Recipes' -%}
-      <a href="#RK_parent" class="jump-to__recipe article__category heading heading--small">Jump to Recipe</a>
+      <span class="jump-to__recipe article__category heading heading--small"> – </span><a href="#rk_parent" class="jump-to__recipe article__category heading heading--small"> Jump to Recipe →</a>
     {%- endif -%}
-
+    
     <h1 class="article__title heading h1">{{ article.title }}</h1>
-
+    
     {%- if article.excerpt != blank -%}
       <div class="article__excerpt text--large">
         {{- article.excerpt -}}
       </div>
+      
     {%- endif -%}
+    
+    
+    
   </div>
 </blog-post-header>
 
