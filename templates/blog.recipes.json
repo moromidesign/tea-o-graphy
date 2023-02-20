@@ -2,10 +2,47 @@
   "sections": {
     "main": {
       "type": "main-blog",
-      "settings": {}
+      "settings": {
+        "show_blog_title": true,
+        "show_tags": true,
+        "show_category": true,
+        "show_excerpt": true,
+        "articles_per_page": 9
+      }
+    },
+    "ba75636b-f2fd-4087-93fc-e8d0e60b6c20": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--15796087521435__ba75636b-f2fd-4087-93fc-e8d0e60b6c20-1676676283b74708ff-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "teas-used-in-our-recipes",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15796087521435__ba75636b-f2fd-4087-93fc-e8d0e60b6c20-1676676283b74708ff-0"
+      ],
+      "settings": {
+        "subheading": "these teas are",
+        "title": "used in our recipes",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "ba75636b-f2fd-4087-93fc-e8d0e60b6c20"
   ]
 }

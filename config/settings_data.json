@@ -326,16 +326,6 @@
         "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
         "disabled": false,
         "settings": {}
-      },
-      "6478312753674380289": {
-        "type": "shopify:\/\/apps\/gempages-landing-page-builder\/blocks\/embed-gp-script-head\/20b379d4-1b20-474c-a6ca-665c331919f3",
-        "disabled": true,
-        "settings": {}
-      },
-      "11596658592240905150": {
-        "type": "shopify:\/\/apps\/gempages-landing-page-builder\/blocks\/embed-gp-script-body\/20b379d4-1b20-474c-a6ca-665c331919f3",
-        "disabled": true,
-        "settings": {}
       }
     }
   },
