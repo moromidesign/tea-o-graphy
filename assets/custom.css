@@ -411,7 +411,7 @@ blockquote.testimonial__content.blockquote {
 /* 
 * Recipe Kit Design Changes
 */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
   .article__header .article__image-wrapper--square {
     max-height: 300px;
     width: unset;
@@ -419,7 +419,22 @@ blockquote.testimonial__content.blockquote {
   .article__header .article__image {
     object-fit: contain;
   }
+  #rk_parent {
+    scroll-margin-top: 200px;
+  }
 }
+@media screen and (max-width: 1024px) {
+  .article__header .article__image {
+    height: auto;
+  }
+  .article__image-wrapper {
+    flex: auto;
+  }
+  #rk_parent {
+    scroll-margin-top: 180px;
+  }
+}
+
 a.article__category.heading.heading--small,
 span.article__category.heading.heading--small {
   display: inline-block;
@@ -432,7 +447,7 @@ span.article__category.heading.heading--small {
   margin-top: var(--container-gutter);
 }
 #rk_parent {
-  scroll-margin-top: 200px;
+  scroll-margin-top: 180px;
 }
 .recipe-card #rk_parent .select_div .original_id_select {
   padding: 0 0px 0 6px;
