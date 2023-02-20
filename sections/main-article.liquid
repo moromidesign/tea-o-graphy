@@ -139,6 +139,7 @@
           <div class="article__content">
             <div class="rte" {{ block.shopify_attributes }}>
               {{- article.content -}}
+              {% comment %} MOROMI added Recipes {% endcomment %}
               <div class="recipe-card">
                 {% render 'recipekit' %}
               </div>
