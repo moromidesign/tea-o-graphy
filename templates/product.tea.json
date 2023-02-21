@@ -14,7 +14,8 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -61,7 +62,8 @@
       "blocks": {
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+          }
         },
         "34eb330b-41b2-429f-997b-ef94387da51e": {
           "type": "brewing_method",
@@ -114,7 +116,8 @@
         "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7",
         "d3406824-ee78-41ae-b412-796db72b7758"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "product-recommendations": {
       "type": "product-recommendations",
