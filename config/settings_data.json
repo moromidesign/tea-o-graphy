@@ -320,15 +320,12 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "10436698916776057164": {
         "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   },
@@ -378,8 +375,7 @@
           "blocks": {
             "message-1": {
               "type": "message",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -413,8 +409,7 @@
           "blocks": {
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "links": {
               "type": "links",
@@ -424,13 +419,11 @@
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             },
             "social_media": {
               "type": "social_media",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -439,8 +432,7 @@
             "newsletter",
             "social_media"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       }
     },
@@ -488,8 +480,7 @@
           "blocks": {
             "message-1": {
               "type": "message",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -523,8 +514,7 @@
           "blocks": {
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "links": {
               "type": "links",
@@ -534,13 +524,11 @@
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             },
             "social_media": {
               "type": "social_media",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -549,8 +537,7 @@
             "newsletter",
             "social_media"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       }
     },
@@ -603,8 +590,7 @@
           "blocks": {
             "message-1": {
               "type": "message",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -638,8 +624,7 @@
           "blocks": {
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "links": {
               "type": "links",
@@ -649,13 +634,11 @@
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             },
             "social_media": {
               "type": "social_media",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -664,8 +647,7 @@
             "newsletter",
             "social_media"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       }
     },
@@ -715,8 +697,7 @@
           "blocks": {
             "message-1": {
               "type": "message",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -750,8 +731,7 @@
           "blocks": {
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "links": {
               "type": "links",
@@ -761,13 +741,11 @@
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             },
             "social_media": {
               "type": "social_media",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -776,8 +754,7 @@
             "newsletter",
             "social_media"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       }
     }
