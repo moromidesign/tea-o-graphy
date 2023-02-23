@@ -201,6 +201,89 @@
         "text_color": "rgba(0,0,0,0)"
       }
     },
+    "cdd12bd5-be04-4e6e-b19c-d53536e756c3": {
+      "type": "timeline",
+      "blocks": {
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-0": {
+          "type": "item",
+          "settings": {
+            "label": "hand-rolled green tea hand-rolled green tea",
+            "title": "hand-rolled green tea",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-1": {
+          "type": "item",
+          "settings": {
+            "label": "organic lemon balm hand-rolled green tea",
+            "title": "organic lemon balm",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-2": {
+          "type": "item",
+          "settings": {
+            "label": "organic lemon peel",
+            "title": "organic lemon peel",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "1ecf8a89-eb8c-429d-82f2-a3013c1d1567": {
+          "type": "item",
+          "settings": {
+            "label": "organic lemongrass",
+            "title": "organic lemongrass",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "a2eb2296-012c-4977-b599-2d8f8c3d37a1": {
+          "type": "item",
+          "settings": {
+            "label": "organic sencha green tea",
+            "title": "organic sencha green tea",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-0",
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-1",
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-2",
+        "1ecf8a89-eb8c-429d-82f2-a3013c1d1567",
+        "a2eb2296-012c-4977-b599-2d8f8c3d37a1"
+      ],
+      "settings": {
+        "subheading": "Subheading",
+        "title": "Timeline",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "39ac79ff-f87c-448d-8b82-4faa826a13df": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "all about the",
+        "title": "Ingredients",
+        "liquid": "<p style=\"text-align: center\">Write or copy\/paste Liquid code<\/p>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -215,6 +298,8 @@
   "order": [
     "main",
     "product-content",
+    "cdd12bd5-be04-4e6e-b19c-d53536e756c3",
+    "39ac79ff-f87c-448d-8b82-4faa826a13df",
     "product-recommendations"
   ]
 }
