@@ -119,6 +119,28 @@
       "settings": {
       }
     },
+    "39ac79ff-f87c-448d-8b82-4faa826a13df": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "all about the",
+        "title": "Ingredients",
+        "liquid": "<p style=\"text-align: center\">Write or copy\/paste Liquid code<\/p>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "subheading": "",
+        "title": "You may also like",
+        "recommendations_count": 4,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
     "cdd12bd5-be04-4e6e-b19c-d53536e756c3": {
       "type": "timeline",
       "blocks": {
@@ -189,35 +211,13 @@
         "item_background": "rgba(0,0,0,0)",
         "item_text_color": "rgba(0,0,0,0)"
       }
-    },
-    "39ac79ff-f87c-448d-8b82-4faa826a13df": {
-      "type": "custom-liquid",
-      "settings": {
-        "subheading": "all about the",
-        "title": "Ingredients",
-        "liquid": "<p style=\"text-align: center\">Write or copy\/paste Liquid code<\/p>",
-        "add_vertical_spacing": true,
-        "background_type": "full_width",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "subheading": "",
-        "title": "You may also like",
-        "recommendations_count": 4,
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
     }
   },
   "order": [
     "main",
     "product-content",
-    "cdd12bd5-be04-4e6e-b19c-d53536e756c3",
     "39ac79ff-f87c-448d-8b82-4faa826a13df",
-    "product-recommendations"
+    "product-recommendations",
+    "cdd12bd5-be04-4e6e-b19c-d53536e756c3"
   ]
 }
