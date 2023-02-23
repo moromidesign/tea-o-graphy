@@ -87,25 +87,25 @@
             "liquid": "{% render 'tasting-notes.liquid' %}"
           }
         },
-        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7": {
-          "type": "trust",
-          "settings": {
-            "icon_1": "picto-fast-delivery",
-            "title_1": "Orders & Shipping",
-            "content_1": "<p><strong>Frequently Asked Questions (FAQ)<\/strong><\/p><p>Read our full list of <a href=\"\/pages\/ordering-info\" target=\"_blank\" title=\"Ordering Info\">Frequently Asked Questions here<\/a>.<strong> <\/strong><\/p><p><\/p><p><strong>•••<\/strong><\/p><p><strong>How long will the order take to process?<\/strong><\/p><p>Due to the handcrafted quality of our product, please note that it <em>can<\/em> take up to 7-10 business days to process your order <em>before<\/em> shipment. <\/p><p>We strive to produce and process orders much faster, yet, this also allows for a healthy buffer for the unexpected and\/or busier times of the year.<\/p><p>During the winter holiday season + new year (November 1 - January 1), in the weeks before Valentine’s Day and mother’s day, and during the release of new or special products\/releases - orders can take up to 10 business days for processing prior to shipping.<\/p><p><strong>How long will the order take to ship after processing?<\/strong><\/p><p>Shipments originate from Taos, NM. Transit times may vary depending on where the packages are being delivered. <\/p><p>Typically shipping times can take up to 3-5 business days.  <\/p><p>However, we buffer in up to <strong>7 business days<\/strong> to buffer for the unexpected and\/or busier times of the year.<\/p>",
-            "icon_2": "picto-chat",
-            "title_2": "Frequently Asked Questions",
-            "content_2": "<p><strong>Frequently Asked Questions (FAQ)<\/strong><\/p><p>Read our full list of <a href=\"\/pages\/ordering-info\" target=\"_blank\" title=\"Ordering Info\">Frequently Asked Questions here<\/a>.<strong> <\/strong><\/p><p><\/p><p><strong>•••<\/strong><\/p><p><strong>When is it best to place my order?<\/strong><\/p><p>Please keep in mind that orders placed after 12 pm MST on Friday may not process or ship until the following week as tea.o.graphy’s production studio is not operational during the weekend. Order before then to receive your order sooner! <\/p><p><\/p><p><strong>Can I get a refund for my order?<\/strong><\/p><p>We're happy when you're happy!<\/p><p>Should you have any problems with your order or a product you have received, do not hesitate to <a href=\"https:\/\/tea-o-graphy.com\/pages\/contact\">contact us<\/a> right away so that we may remedy the situation.<\/p><p>We're happy when you're happy!<\/p><p>Should you have any problems with your order or a product you have received, do not hesitate to <a href=\"https:\/\/tea-o-graphy.com\/pages\/contact\">contact us<\/a> right away so that we may remedy the situation.<\/p>",
-            "icon_3": "picto-secure-payment",
-            "title_3": "Secure Payments",
-            "content_3": "<p><strong>We use Shopify and Shopify Payments<\/strong><\/p><p>We chose Shopify to manage your shopping information with us and build our store both because of their care for security and the ease at which we could create a beautiful and easy experience for you to find and learn all about us and our teas.<\/p><p>Shopify is certified Level 1 PCI DSS compliant. The Payment Card Industry Data Security Standard (PCI DSS) is a security standard for organizations that handle credit and debit card information. The standard was created to increase controls around payment data to reduce fraud. <\/p><p>Shopify runs annual assessments validating their security and compliance through the continuous risk management of their software and making sure their ecommerce is secure.<\/p><p>For information about Shopify's PCI Compliance reports, see <a href=\"https:\/\/help.shopify.com\/en\/manual\/your-account\/account-security\/compliance-docs\"><span style=\"text-decoration:underline\">Viewing Shopify’s compliance reports<\/span><\/a>.<\/p>"
-          }
-        },
         "d3406824-ee78-41ae-b412-796db72b7758": {
           "type": "featured_data",
           "settings": {
             "title": "Featured details",
             "details": ""
+          }
+        },
+        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7": {
+          "type": "trust",
+          "settings": {
+            "icon_1": "picto-fast-delivery",
+            "title_1": "Orders + Shipping",
+            "content_1": "<p><strong>Frequently Asked Questions (FAQ)<\/strong><\/p><p>Read our full list of <a href=\"\/pages\/ordering-info\" target=\"_blank\" title=\"Ordering Info\">Frequently Asked Questions here<\/a>.<strong> <\/strong><\/p><p><\/p><p><strong>•••<\/strong><\/p><p><strong>How long will the order take to process?<\/strong><\/p><p>Due to the handcrafted quality of our product, please note that it <em>can<\/em> take up to 7-10 business days to process your order <em>before<\/em> shipment. <\/p><p>We strive to produce and process orders much faster, yet, this also allows for a healthy buffer for the unexpected and\/or busier times of the year.<\/p><p>During the winter holiday season + new year (November 1 - January 1), in the weeks before Valentine’s Day and mother’s day, and during the release of new or special products\/releases - orders can take up to 10 business days for processing prior to shipping.<\/p><p><strong>How long will the order take to ship after processing?<\/strong><\/p><p>Shipments originate from Taos, NM. Transit times may vary depending on where the packages are being delivered. <\/p><p>Typically shipping times can take up to 3-5 business days.  <\/p><p>However, we buffer in up to <strong>7 business days<\/strong> to buffer for the unexpected and\/or busier times of the year.<\/p>",
+            "icon_2": "picto-chat",
+            "title_2": "Questions",
+            "content_2": "<p><strong>Frequently Asked Questions (FAQ)<\/strong><\/p><p>Read our full list of <a href=\"\/pages\/ordering-info\" target=\"_blank\" title=\"Ordering Info\">Frequently Asked Questions here<\/a>.<strong> <\/strong><\/p><p><\/p><p><strong>•••<\/strong><\/p><p><strong>When is it best to place my order?<\/strong><\/p><p>Please keep in mind that orders placed after 12 pm MST on Friday may not process or ship until the following week as tea.o.graphy’s production studio is not operational during the weekend. Order before then to receive your order sooner! <\/p><p><\/p><p><strong>Can I get a refund for my order?<\/strong><\/p><p>We're happy when you're happy!<\/p><p>Should you have any problems with your order or a product you have received, do not hesitate to <a href=\"https:\/\/tea-o-graphy.com\/pages\/contact\">contact us<\/a> right away so that we may remedy the situation.<\/p><p>We're happy when you're happy!<\/p><p>Should you have any problems with your order or a product you have received, do not hesitate to <a href=\"https:\/\/tea-o-graphy.com\/pages\/contact\">contact us<\/a> right away so that we may remedy the situation.<\/p>",
+            "icon_3": "picto-secure-payment",
+            "title_3": "Secure Payments",
+            "content_3": "<p><strong>We use Shopify and Shopify Payments<\/strong><\/p><p>We chose Shopify to manage your shopping information with us and build our store both because of their care for security and the ease at which we could create a beautiful and easy experience for you to find and learn all about us and our teas.<\/p><p>Shopify is certified Level 1 PCI DSS compliant. The Payment Card Industry Data Security Standard (PCI DSS) is a security standard for organizations that handle credit and debit card information. The standard was created to increase controls around payment data to reduce fraud. <\/p><p>Shopify runs annual assessments validating their security and compliance through the continuous risk management of their software and making sure their ecommerce is secure.<\/p><p>For information about Shopify's PCI Compliance reports, see <a href=\"https:\/\/help.shopify.com\/en\/manual\/your-account\/account-security\/compliance-docs\"><span style=\"text-decoration:underline\">Viewing Shopify’s compliance reports<\/span><\/a>.<\/p>"
           }
         }
       },
@@ -113,10 +113,92 @@
         "description",
         "34eb330b-41b2-429f-997b-ef94387da51e",
         "54ae40b2-2867-466e-b22f-e0ee45344bb3",
-        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7",
-        "d3406824-ee78-41ae-b412-796db72b7758"
+        "d3406824-ee78-41ae-b412-796db72b7758",
+        "1fe5ae8f-7994-409b-8c35-a26ac77eb9f7"
+      ],
+      "settings": {}
+    },
+    "cdd12bd5-be04-4e6e-b19c-d53536e756c3": {
+      "type": "timeline",
+      "blocks": {
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-0": {
+          "type": "item",
+          "settings": {
+            "label": "hand-rolled green tea hand-rolled green tea",
+            "title": "hand-rolled green tea",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-1": {
+          "type": "item",
+          "settings": {
+            "label": "organic lemon balm hand-rolled green tea",
+            "title": "organic lemon balm",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-2": {
+          "type": "item",
+          "settings": {
+            "label": "organic lemon peel",
+            "title": "organic lemon peel",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "1ecf8a89-eb8c-429d-82f2-a3013c1d1567": {
+          "type": "item",
+          "settings": {
+            "label": "organic lemongrass",
+            "title": "organic lemongrass",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "a2eb2296-012c-4977-b599-2d8f8c3d37a1": {
+          "type": "item",
+          "settings": {
+            "label": "organic sencha green tea",
+            "title": "organic sencha green tea",
+            "content": "<p>Write content about your store<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-0",
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-1",
+        "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-2",
+        "1ecf8a89-eb8c-429d-82f2-a3013c1d1567",
+        "a2eb2296-012c-4977-b599-2d8f8c3d37a1"
       ],
       "settings": {
+        "subheading": "Subheading",
+        "title": "Timeline",
+        "text_position": "middle",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "item_background": "rgba(0,0,0,0)",
+        "item_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "39ac79ff-f87c-448d-8b82-4faa826a13df": {
+      "type": "custom-liquid",
+      "settings": {
+        "subheading": "all about the",
+        "title": "Ingredients",
+        "liquid": "<p style=\"text-align: center\">Write or copy\/paste Liquid code<\/p>",
+        "add_vertical_spacing": true,
+        "background_type": "full_width",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     },
     "product-recommendations": {
