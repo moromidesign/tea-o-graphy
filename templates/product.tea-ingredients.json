@@ -124,10 +124,12 @@
       "blocks": {
         "template--15798723248283__cdd12bd5-be04-4e6e-b19c-d53536e756c3-16771905894e2913a7-0": {
           "type": "item",
+          "repeater": "{{ product.metafields.custom.ingredients_view.value }}",
           "settings": {
-            "label": "hand-rolled green tea hand-rolled green tea",
+            "image": "{{ block.repeater.image.value }}",
+            "label": "{{ block.repeater.name.value }}",
             "title": "hand-rolled green tea",
-            "content": "<p>Write content about your store<\/p>",
+            "content": "{{ block.repeater.details | metafield_tag }}",
             "button_text": "",
             "button_link": ""
           }
