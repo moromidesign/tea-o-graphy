@@ -157,12 +157,127 @@
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
+    },
+    "bf1c73fc-36ac-41cd-9976-90ccd2820d6e": {
+      "type": "gallery",
+      "blocks": {
+        "template--15802318127259__bf1c73fc-36ac-41cd-9976-90ccd2820d6e-1677284065be3dcba2-0": {
+          "type": "image",
+          "repeater": "{{ product.metafields.custom.ingredients_view.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "caption": "<p>{{ block.repeater.details | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15802318127259__bf1c73fc-36ac-41cd-9976-90ccd2820d6e-1677284065be3dcba2-0"
+      ],
+      "settings": {
+        "subheading": "Subheading",
+        "title": "Gallery",
+        "show_arrows": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "a8ee95f1-eae6-4091-b371-549f2aa019a1": {
+      "type": "multi-column",
+      "blocks": {
+        "template--15802318127259__a8ee95f1-eae6-4091-b371-549f2aa019a1-1677284121c85f00f9-3": {
+          "type": "item",
+          "repeater": "{{ product.metafields.custom.ingredients_view.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "image_width": 100,
+            "image_border": "rgba(0,0,0,0)",
+            "title": "{{ block.repeater.name.value }}",
+            "content": "<p>{{ block.repeater.details | metafield_tag }}<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_alignment": "center",
+            "vertical_alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "template--15802318127259__a8ee95f1-eae6-4091-b371-549f2aa019a1-1677284121c85f00f9-3"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "stack_items": false,
+        "subheading": "Subheading",
+        "title": "Multi-column",
+        "content": "",
+        "column_alignment": "center",
+        "mobile_item_size": "medium",
+        "desktop_item_size": "large",
+        "spacing": "loose",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "6234e07e-013a-45ac-be7e-8ac88e4ff5fd": {
+      "type": "faq",
+      "blocks": {
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-1": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+          }
+        },
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-0": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-2": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+          }
+        },
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-3": {
+          "type": "category",
+          "settings": {
+            "title": "Other"
+          }
+        },
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-4": {
+          "type": "question",
+          "settings": {
+            "title": "Any question?",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-1",
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-0",
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-2",
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-3",
+        "template--15802318127259__6234e07e-013a-45ac-be7e-8ac88e4ff5fd-16772842490c97c710-4"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "FAQ",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
     }
   },
   "order": [
     "main",
     "product-content",
     "cdd12bd5-be04-4e6e-b19c-d53536e756c3",
-    "product-recommendations"
+    "product-recommendations",
+    "bf1c73fc-36ac-41cd-9976-90ccd2820d6e",
+    "a8ee95f1-eae6-4091-b371-549f2aa019a1",
+    "6234e07e-013a-45ac-be7e-8ac88e4ff5fd"
   ]
 }
