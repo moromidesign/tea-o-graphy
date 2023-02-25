@@ -128,7 +128,7 @@
           "settings": {
             "image": "{{ block.repeater.image.value }}",
             "label": "{{ block.repeater.name.value }}",
-            "title": "hand-rolled green tea",
+            "title": "{{ block.repeater.name.value }}",
             "content": "<p>{{ block.repeater.details | metafield_tag }}<\/p>",
             "button_text": "",
             "button_link": ""
@@ -148,18 +148,6 @@
         "item_text_color": "rgba(0,0,0,0)"
       }
     },
-    "39ac79ff-f87c-448d-8b82-4faa826a13df": {
-      "type": "custom-liquid",
-      "settings": {
-        "subheading": "all about the",
-        "title": "Ingredients",
-        "liquid": "<p style=\"text-align: center\">Write or copy\/paste Liquid code<\/p>",
-        "add_vertical_spacing": true,
-        "background_type": "full_width",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -175,7 +163,6 @@
     "main",
     "product-content",
     "cdd12bd5-be04-4e6e-b19c-d53536e756c3",
-    "39ac79ff-f87c-448d-8b82-4faa826a13df",
     "product-recommendations"
   ]
 }
