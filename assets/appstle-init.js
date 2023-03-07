@@ -37,7 +37,7 @@
         },
         "enableCartWidgetFeature": "false",
         "useUrlWithCustomerId": "true",
-        "atcButtonSelector": "",
+        "atcButtonSelector": "#AddToCart",
         "moneyFormat": "{% raw %}${{amount}}{% endraw %}",
         "oneTimePurchaseText": "Add to your cart",
         "shop": "tea-o-graphy-taos.myshopify.com",
