@@ -25,7 +25,7 @@
         "selectors": {
             "payment_button_selectors": "form[action$='/cart/add'] .shopify-payment-button",
             "subscriptionLinkSelector": "",
-            "atcButtonPlacement": "BEFORE",
+            "atcButtonPlacement": "AFTER",
             "subscriptionLinkPlacement": "BEFORE",
             "cartRowSelector": "",
             "cartLineItemSelector": "",
@@ -37,7 +37,7 @@
         },
         "enableCartWidgetFeature": "false",
         "useUrlWithCustomerId": "true",
-        "atcButtonSelector": "",
+        "atcButtonSelector": "option-template--15798723248283__main-tea-5315146776731-1-combo-box",
         "moneyFormat": "{% raw %}${{amount}}{% endraw %}",
         "oneTimePurchaseText": "Add to your cart",
         "shop": "tea-o-graphy-taos.myshopify.com",
