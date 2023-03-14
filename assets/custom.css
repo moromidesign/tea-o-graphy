@@ -197,6 +197,7 @@ a.product-item-meta__title {
   background-color: rgb(var(--secondary-background));
   --details-offset: 15px;
   padding: var(--details-offset);
+  flex: auto;
 }
 
 /* new flex container for featured product and details */
