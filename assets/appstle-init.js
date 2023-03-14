@@ -17,7 +17,7 @@
       };
 
 
-      appstleLoadScript("https://cdn.shopify.com/s/files/1/0398/2327/8235/t/20/assets/appstle-subscription.js?v=1678232684");
+      appstleLoadScript("https://cdn.shopify.com/s/files/1/0398/2327/8235/t/20/assets/appstle-subscription.js?v=1678827894");
 
 
       window.RS = Window.RS || {};
@@ -37,7 +37,7 @@
         },
         "enableCartWidgetFeature": "false",
         "useUrlWithCustomerId": "true",
-        "atcButtonSelector": "",
+        "atcButtonSelector": "#AddToCart",
         "moneyFormat": "{% raw %}${{amount}}{% endraw %}",
         "oneTimePurchaseText": "Add to your cart",
         "shop": "tea-o-graphy-taos.myshopify.com",
