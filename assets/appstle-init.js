@@ -39,7 +39,7 @@
         "useUrlWithCustomerId": "true",
         "atcButtonSelector": "#AddToCart",
         "moneyFormat": "{% raw %}${{amount}}{% endraw %}",
-        "oneTimePurchaseText": "Add to your cart",
+        "oneTimePurchaseText": "Just this once, thank you!",
         "shop": "tea-o-graphy-taos.myshopify.com",
         "deliveryText": "delivery",
         "purchaseOptionsText": "Purchase Options",
