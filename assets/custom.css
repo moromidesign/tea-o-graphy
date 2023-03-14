@@ -222,7 +222,7 @@ a.product-item-meta__title {
 }
 @media screen and (min-width: 1025px) {
   .product-content__featured-data {
-    width: calc(var(--grid-column-width) * 7 + var(--grid-gap) * 6);
+    /* width: calc(var(--grid-column-width) * 7 + var(--grid-gap) * 6); */
   }
 }
 
