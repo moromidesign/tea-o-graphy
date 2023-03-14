@@ -210,7 +210,7 @@ a.product-item-meta__title {
 }
 @media screen and (max-width: 1000px) {
   .product-content__featured-data {
-    /* width: calc(100vw - var(--container-gutter) * 2); */
+    width: calc(100vw - var(--container-gutter) * 2);
   }
   .product-content__featured_data-and-product {
     gap: var(--grid-gap);
